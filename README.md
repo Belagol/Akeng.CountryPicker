@@ -213,4 +213,4 @@ MIT License
 
 ---
 
-Made with ❤️ by **Dr Ange Gabriel Belinga**using .NET MAUI
+Made with ❤️ by **Dr Ange Gabriel Belinga** using .NET MAUI

@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Package .NET MAUI fournissant la liste des pays, indicatifs téléphoniques et drap" +
     "eaux.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.3.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.3+94503ba22b78b086ab5c7a819c1be681eb81f2f0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.3+6cabf998b11c90d9582207ed8d0119f4ca848f45")]
 [assembly: System.Reflection.AssemblyProductAttribute("AkengCountryPicker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AkengCountryPicker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.3.0")]
