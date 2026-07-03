@@ -188,11 +188,22 @@ Coming soon.
 
 ---
 
-# Contributing
+## 🤝 Contributing
 
-Contributions are welcome.
+Contributions are welcome!
 
-Feel free to submit issues or pull requests.
+You can contribute by:
+
+- Reporting bugs
+- Suggesting new features
+- Improving documentation
+- Submitting pull requests
+
+Repository: https://github.com/Belagol/Akeng.CountryPicker
+
+Issues: https://github.com/Belagol/Akeng.CountryPicker/issues
+
+Pull Requests: https://github.com/Belagol/Akeng.CountryPicker/pulls
 
 ---
 
