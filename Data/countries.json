@@ -1,0 +1,1874 @@
+[
+  {
+    "name": "Afghanistan",
+    "nativeName": "افغانستان",
+    "iso2": "AF",
+    "iso3": "AFG",
+    "dialCode": "+93",
+    "flagEmoji": "🇦🇫"
+  },
+  {
+    "name": "Afrique du Sud",
+    "nativeName": "South Africa",
+    "iso2": "ZA",
+    "iso3": "ZAF",
+    "dialCode": "+27",
+    "flagEmoji": "🇿🇦"
+  },
+  {
+    "name": "Albanie",
+    "nativeName": "Shqipëria",
+    "iso2": "AL",
+    "iso3": "ALB",
+    "dialCode": "+355",
+    "flagEmoji": "🇦🇱"
+  },
+  {
+    "name": "Algérie",
+    "nativeName": "الجزائر",
+    "iso2": "DZ",
+    "iso3": "DZA",
+    "dialCode": "+213",
+    "flagEmoji": "🇩🇿"
+  },
+  {
+    "name": "Allemagne",
+    "nativeName": "Deutschland",
+    "iso2": "DE",
+    "iso3": "DEU",
+    "dialCode": "+49",
+    "flagEmoji": "🇩🇪"
+  },
+  {
+    "name": "Angola",
+    "nativeName": "Angola",
+    "iso2": "AO",
+    "iso3": "AGO",
+    "dialCode": "+244",
+    "flagEmoji": "🇦🇴"
+  },
+  {
+    "name": "Anguilla",
+    "nativeName": "Anguilla",
+    "iso2": "AI",
+    "iso3": "AIA",
+    "dialCode": "+1264",
+    "flagEmoji": "🇦🇮"
+  },
+  {
+    "name": "Antigua-et-Barbuda",
+    "nativeName": "Antigua and Barbuda",
+    "iso2": "AG",
+    "iso3": "ATG",
+    "dialCode": "+1268",
+    "flagEmoji": "🇦🇬"
+  },
+  {
+    "name": "Arabie saoudite",
+    "nativeName": "العربية السعودية",
+    "iso2": "SA",
+    "iso3": "SAU",
+    "dialCode": "+966",
+    "flagEmoji": "🇸🇦"
+  },
+  {
+    "name": "Argentine",
+    "nativeName": "Argentina",
+    "iso2": "AR",
+    "iso3": "ARG",
+    "dialCode": "+54",
+    "flagEmoji": "🇦🇷"
+  },
+  {
+    "name": "Arménie",
+    "nativeName": "Հայաստան",
+    "iso2": "AM",
+    "iso3": "ARM",
+    "dialCode": "+374",
+    "flagEmoji": "🇦🇲"
+  },
+  {
+    "name": "Aruba",
+    "nativeName": "Aruba",
+    "iso2": "AW",
+    "iso3": "ABW",
+    "dialCode": "+297",
+    "flagEmoji": "🇦🇼"
+  },
+  {
+    "name": "Australie",
+    "nativeName": "Australia",
+    "iso2": "AU",
+    "iso3": "AUS",
+    "dialCode": "+61",
+    "flagEmoji": "🇦🇺"
+  },
+  {
+    "name": "Autriche",
+    "nativeName": "Österreich",
+    "iso2": "AT",
+    "iso3": "AUT",
+    "dialCode": "+43",
+    "flagEmoji": "🇦🇹"
+  },
+  {
+    "name": "Azerbaïdjan",
+    "nativeName": "Azərbaycan",
+    "iso2": "AZ",
+    "iso3": "AZE",
+    "dialCode": "+994",
+    "flagEmoji": "🇦🇿"
+  },
+  {
+    "name": "Bahamas",
+    "nativeName": "Bahamas",
+    "iso2": "BS",
+    "iso3": "BHS",
+    "dialCode": "+1242",
+    "flagEmoji": "🇧🇸"
+  },
+  {
+    "name": "Bahreïn",
+    "nativeName": "‏البحرين",
+    "iso2": "BH",
+    "iso3": "BHR",
+    "dialCode": "+973",
+    "flagEmoji": "🇧🇭"
+  },
+  {
+    "name": "Bangladesh",
+    "nativeName": "বাংলাদেশ",
+    "iso2": "BD",
+    "iso3": "BGD",
+    "dialCode": "+880",
+    "flagEmoji": "🇧🇩"
+  },
+  {
+    "name": "Barbade",
+    "nativeName": "Barbados",
+    "iso2": "BB",
+    "iso3": "BRB",
+    "dialCode": "+1246",
+    "flagEmoji": "🇧🇧"
+  },
+  {
+    "name": "Belgique",
+    "nativeName": "België",
+    "iso2": "BE",
+    "iso3": "BEL",
+    "dialCode": "+32",
+    "flagEmoji": "🇧🇪"
+  },
+  {
+    "name": "Belize",
+    "nativeName": "Belize",
+    "iso2": "BZ",
+    "iso3": "BLZ",
+    "dialCode": "+501",
+    "flagEmoji": "🇧🇿"
+  },
+  {
+    "name": "Bénin",
+    "nativeName": "Bénin",
+    "iso2": "BJ",
+    "iso3": "BEN",
+    "dialCode": "+229",
+    "flagEmoji": "🇧🇯"
+  },
+  {
+    "name": "Bermudes",
+    "nativeName": "Bermuda",
+    "iso2": "BM",
+    "iso3": "BMU",
+    "dialCode": "+1441",
+    "flagEmoji": "🇧🇲"
+  },
+  {
+    "name": "Bhoutan",
+    "nativeName": "ʼbrug-yul",
+    "iso2": "BT",
+    "iso3": "BTN",
+    "dialCode": "+975",
+    "flagEmoji": "🇧🇹"
+  },
+  {
+    "name": "Biélorussie",
+    "nativeName": "Белару́сь",
+    "iso2": "BY",
+    "iso3": "BLR",
+    "dialCode": "+375",
+    "flagEmoji": "🇧🇾"
+  },
+  {
+    "name": "Bolivie",
+    "nativeName": "Bolivia",
+    "iso2": "BO",
+    "iso3": "BOL",
+    "dialCode": "+591",
+    "flagEmoji": "🇧🇴"
+  },
+  {
+    "name": "Bosnie-Herzégovine",
+    "nativeName": "Bosna i Hercegovina",
+    "iso2": "BA",
+    "iso3": "BIH",
+    "dialCode": "+387",
+    "flagEmoji": "🇧🇦"
+  },
+  {
+    "name": "Botswana",
+    "nativeName": "Botswana",
+    "iso2": "BW",
+    "iso3": "BWA",
+    "dialCode": "+267",
+    "flagEmoji": "🇧🇼"
+  },
+  {
+    "name": "Brésil",
+    "nativeName": "Brasil",
+    "iso2": "BR",
+    "iso3": "BRA",
+    "dialCode": "+55",
+    "flagEmoji": "🇧🇷"
+  },
+  {
+    "name": "Brunei",
+    "nativeName": "Negara Brunei Darussalam",
+    "iso2": "BN",
+    "iso3": "BRN",
+    "dialCode": "+673",
+    "flagEmoji": "🇧🇳"
+  },
+  {
+    "name": "Bulgarie",
+    "nativeName": "България",
+    "iso2": "BG",
+    "iso3": "BGR",
+    "dialCode": "+359",
+    "flagEmoji": "🇧🇬"
+  },
+  {
+    "name": "Burkina Faso",
+    "nativeName": "Burkina Faso",
+    "iso2": "BF",
+    "iso3": "BFA",
+    "dialCode": "+226",
+    "flagEmoji": "🇧🇫"
+  },
+  {
+    "name": "Burundi",
+    "nativeName": "Burundi",
+    "iso2": "BI",
+    "iso3": "BDI",
+    "dialCode": "+257",
+    "flagEmoji": "🇧🇮"
+  },
+  {
+    "name": "Cambodge",
+    "nativeName": "Kâmpŭchéa",
+    "iso2": "KH",
+    "iso3": "KHM",
+    "dialCode": "+855",
+    "flagEmoji": "🇰🇭"
+  },
+  {
+    "name": "Cameroun",
+    "nativeName": "Cameroon",
+    "iso2": "CM",
+    "iso3": "CMR",
+    "dialCode": "+237",
+    "flagEmoji": "🇨🇲"
+  },
+  {
+    "name": "Canada",
+    "nativeName": "Canada",
+    "iso2": "CA",
+    "iso3": "CAN",
+    "dialCode": "+1",
+    "flagEmoji": "🇨🇦"
+  },
+  {
+    "name": "Cap-Vert",
+    "nativeName": "Cabo Verde",
+    "iso2": "CV",
+    "iso3": "CPV",
+    "dialCode": "+238",
+    "flagEmoji": "🇨🇻"
+  },
+  {
+    "name": "Chili",
+    "nativeName": "Chile",
+    "iso2": "CL",
+    "iso3": "CHL",
+    "dialCode": "+56",
+    "flagEmoji": "🇨🇱"
+  },
+  {
+    "name": "Chine",
+    "nativeName": "中国",
+    "iso2": "CN",
+    "iso3": "CHN",
+    "dialCode": "+86",
+    "flagEmoji": "🇨🇳"
+  },
+  {
+    "name": "Chypre",
+    "nativeName": "Κύπρος",
+    "iso2": "CY",
+    "iso3": "CYP",
+    "dialCode": "+357",
+    "flagEmoji": "🇨🇾"
+  },
+  {
+    "name": "Colombie",
+    "nativeName": "Colombia",
+    "iso2": "CO",
+    "iso3": "COL",
+    "dialCode": "+57",
+    "flagEmoji": "🇨🇴"
+  },
+  {
+    "name": "Comores",
+    "nativeName": "Komori",
+    "iso2": "KM",
+    "iso3": "COM",
+    "dialCode": "+269",
+    "flagEmoji": "🇰🇲"
+  },
+  {
+    "name": "Congo-Brazzaville",
+    "nativeName": "République du Congo",
+    "iso2": "CG",
+    "iso3": "COG",
+    "dialCode": "+242",
+    "flagEmoji": "🇨🇬"
+  },
+  {
+    "name": "Congo-Kinshasa",
+    "nativeName": "République démocratique du Congo",
+    "iso2": "CD",
+    "iso3": "COD",
+    "dialCode": "+243",
+    "flagEmoji": "🇨🇩"
+  },
+  {
+    "name": "Corée du Nord",
+    "nativeName": "북한",
+    "iso2": "KP",
+    "iso3": "PRK",
+    "dialCode": "+850",
+    "flagEmoji": "🇰🇵"
+  },
+  {
+    "name": "Corée du Sud",
+    "nativeName": "대한민국",
+    "iso2": "KR",
+    "iso3": "KOR",
+    "dialCode": "+82",
+    "flagEmoji": "🇰🇷"
+  },
+  {
+    "name": "Costa Rica",
+    "nativeName": "Costa Rica",
+    "iso2": "CR",
+    "iso3": "CRI",
+    "dialCode": "+506",
+    "flagEmoji": "🇨🇷"
+  },
+  {
+    "name": "Côte d’Ivoire",
+    "nativeName": "Côte d'Ivoire",
+    "iso2": "CI",
+    "iso3": "CIV",
+    "dialCode": "+225",
+    "flagEmoji": "🇨🇮"
+  },
+  {
+    "name": "Croatie",
+    "nativeName": "Hrvatska",
+    "iso2": "HR",
+    "iso3": "HRV",
+    "dialCode": "+385",
+    "flagEmoji": "🇭🇷"
+  },
+  {
+    "name": "Cuba",
+    "nativeName": "Cuba",
+    "iso2": "CU",
+    "iso3": "CUB",
+    "dialCode": "+53",
+    "flagEmoji": "🇨🇺"
+  },
+  {
+    "name": "Danemark",
+    "nativeName": "Danmark",
+    "iso2": "DK",
+    "iso3": "DNK",
+    "dialCode": "+45",
+    "flagEmoji": "🇩🇰"
+  },
+  {
+    "name": "Djibouti",
+    "nativeName": "Djibouti",
+    "iso2": "DJ",
+    "iso3": "DJI",
+    "dialCode": "+253",
+    "flagEmoji": "🇩🇯"
+  },
+  {
+    "name": "Dominique",
+    "nativeName": "Dominica",
+    "iso2": "DM",
+    "iso3": "DMA",
+    "dialCode": "+1767",
+    "flagEmoji": "🇩🇲"
+  },
+  {
+    "name": "Égypte",
+    "nativeName": "مصر‎",
+    "iso2": "EG",
+    "iso3": "EGY",
+    "dialCode": "+20",
+    "flagEmoji": "🇪🇬"
+  },
+  {
+    "name": "Émirats arabes unis",
+    "nativeName": "دولة الإمارات العربية المتحدة",
+    "iso2": "AE",
+    "iso3": "ARE",
+    "dialCode": "+971",
+    "flagEmoji": "🇦🇪"
+  },
+  {
+    "name": "Équateur",
+    "nativeName": "Ecuador",
+    "iso2": "EC",
+    "iso3": "ECU",
+    "dialCode": "+593",
+    "flagEmoji": "🇪🇨"
+  },
+  {
+    "name": "Érythrée",
+    "nativeName": "ኤርትራ",
+    "iso2": "ER",
+    "iso3": "ERI",
+    "dialCode": "+291",
+    "flagEmoji": "🇪🇷"
+  },
+  {
+    "name": "Espagne",
+    "nativeName": "España",
+    "iso2": "ES",
+    "iso3": "ESP",
+    "dialCode": "+34",
+    "flagEmoji": "🇪🇸"
+  },
+  {
+    "name": "Estonie",
+    "nativeName": "Eesti",
+    "iso2": "EE",
+    "iso3": "EST",
+    "dialCode": "+372",
+    "flagEmoji": "🇪🇪"
+  },
+  {
+    "name": "Eswatini",
+    "nativeName": "Swaziland",
+    "iso2": "SZ",
+    "iso3": "SWZ",
+    "dialCode": "+268",
+    "flagEmoji": "🇸🇿"
+  },
+  {
+    "name": "États-Unis",
+    "nativeName": "United States",
+    "iso2": "US",
+    "iso3": "USA",
+    "dialCode": "+1",
+    "flagEmoji": "🇺🇸"
+  },
+  {
+    "name": "Éthiopie",
+    "nativeName": "ኢትዮጵያ",
+    "iso2": "ET",
+    "iso3": "ETH",
+    "dialCode": "+251",
+    "flagEmoji": "🇪🇹"
+  },
+  {
+    "name": "Fidji",
+    "nativeName": "Fiji",
+    "iso2": "FJ",
+    "iso3": "FJI",
+    "dialCode": "+679",
+    "flagEmoji": "🇫🇯"
+  },
+  {
+    "name": "Finlande",
+    "nativeName": "Suomi",
+    "iso2": "FI",
+    "iso3": "FIN",
+    "dialCode": "+358",
+    "flagEmoji": "🇫🇮"
+  },
+  {
+    "name": "France",
+    "nativeName": "France",
+    "iso2": "FR",
+    "iso3": "FRA",
+    "dialCode": "+33",
+    "flagEmoji": "🇫🇷"
+  },
+  {
+    "name": "Gabon",
+    "nativeName": "Gabon",
+    "iso2": "GA",
+    "iso3": "GAB",
+    "dialCode": "+241",
+    "flagEmoji": "🇬🇦"
+  },
+  {
+    "name": "Gambie",
+    "nativeName": "Gambia",
+    "iso2": "GM",
+    "iso3": "GMB",
+    "dialCode": "+220",
+    "flagEmoji": "🇬🇲"
+  },
+  {
+    "name": "Géorgie",
+    "nativeName": "საქართველო",
+    "iso2": "GE",
+    "iso3": "GEO",
+    "dialCode": "+995",
+    "flagEmoji": "🇬🇪"
+  },
+  {
+    "name": "Géorgie du Sud-et-les Îles Sandwich du Sud",
+    "nativeName": "South Georgia",
+    "iso2": "GS",
+    "iso3": "SGS",
+    "dialCode": "+500",
+    "flagEmoji": "🇬🇸"
+  },
+  {
+    "name": "Ghana",
+    "nativeName": "Ghana",
+    "iso2": "GH",
+    "iso3": "GHA",
+    "dialCode": "+233",
+    "flagEmoji": "🇬🇭"
+  },
+  {
+    "name": "Gibraltar",
+    "nativeName": "Gibraltar",
+    "iso2": "GI",
+    "iso3": "GIB",
+    "dialCode": "+350",
+    "flagEmoji": "🇬🇮"
+  },
+  {
+    "name": "Grèce",
+    "nativeName": "Ελλάδα",
+    "iso2": "GR",
+    "iso3": "GRC",
+    "dialCode": "+30",
+    "flagEmoji": "🇬🇷"
+  },
+  {
+    "name": "Grenade",
+    "nativeName": "Grenada",
+    "iso2": "GD",
+    "iso3": "GRD",
+    "dialCode": "+1473",
+    "flagEmoji": "🇬🇩"
+  },
+  {
+    "name": "Groenland",
+    "nativeName": "Kalaallit Nunaat",
+    "iso2": "GL",
+    "iso3": "GRL",
+    "dialCode": "+299",
+    "flagEmoji": "🇬🇱"
+  },
+  {
+    "name": "Guadeloupe",
+    "nativeName": "Guadeloupe",
+    "iso2": "GP",
+    "iso3": "GLP",
+    "dialCode": "+590",
+    "flagEmoji": "🇬🇵"
+  },
+  {
+    "name": "Guam",
+    "nativeName": "Guam",
+    "iso2": "GU",
+    "iso3": "GUM",
+    "dialCode": "+1671",
+    "flagEmoji": "🇬🇺"
+  },
+  {
+    "name": "Guatemala",
+    "nativeName": "Guatemala",
+    "iso2": "GT",
+    "iso3": "GTM",
+    "dialCode": "+502",
+    "flagEmoji": "🇬🇹"
+  },
+  {
+    "name": "Guernesey",
+    "nativeName": "Guernsey",
+    "iso2": "GG",
+    "iso3": "GGY",
+    "dialCode": "+44",
+    "flagEmoji": "🇬🇬"
+  },
+  {
+    "name": "Guinée",
+    "nativeName": "Guinée",
+    "iso2": "GN",
+    "iso3": "GIN",
+    "dialCode": "+224",
+    "flagEmoji": "🇬🇳"
+  },
+  {
+    "name": "Guinée équatoriale",
+    "nativeName": "Guinea Ecuatorial",
+    "iso2": "GQ",
+    "iso3": "GNQ",
+    "dialCode": "+240",
+    "flagEmoji": "🇬🇶"
+  },
+  {
+    "name": "Guinée-Bissau",
+    "nativeName": "Guiné-Bissau",
+    "iso2": "GW",
+    "iso3": "GNB",
+    "dialCode": "+245",
+    "flagEmoji": "🇬🇼"
+  },
+  {
+    "name": "Guyana",
+    "nativeName": "Guyana",
+    "iso2": "GY",
+    "iso3": "GUY",
+    "dialCode": "+592",
+    "flagEmoji": "🇬🇾"
+  },
+  {
+    "name": "Guyane française",
+    "nativeName": "Guyane française",
+    "iso2": "GF",
+    "iso3": "GUF",
+    "dialCode": "+594",
+    "flagEmoji": "🇬🇫"
+  },
+  {
+    "name": "Haïti",
+    "nativeName": "Haïti",
+    "iso2": "HT",
+    "iso3": "HTI",
+    "dialCode": "+509",
+    "flagEmoji": "🇭🇹"
+  },
+  {
+    "name": "Honduras",
+    "nativeName": "Honduras",
+    "iso2": "HN",
+    "iso3": "HND",
+    "dialCode": "+504",
+    "flagEmoji": "🇭🇳"
+  },
+  {
+    "name": "Hongrie",
+    "nativeName": "Magyarország",
+    "iso2": "HU",
+    "iso3": "HUN",
+    "dialCode": "+36",
+    "flagEmoji": "🇭🇺"
+  },
+  {
+    "name": "Hongrie",
+    "nativeName": "Hongrie",
+    "iso2": "HU",
+    "iso3": "HUN",
+    "dialCode": "",
+    "flagEmoji": "🇭🇺"
+  },
+  {
+    "name": "Île Christmas",
+    "nativeName": "Christmas Island",
+    "iso2": "CX",
+    "iso3": "CXR",
+    "dialCode": "+61",
+    "flagEmoji": "🇨🇽"
+  },
+  {
+    "name": "Île de Man",
+    "nativeName": "Isle of Man",
+    "iso2": "IM",
+    "iso3": "IMN",
+    "dialCode": "+44",
+    "flagEmoji": "🇮🇲"
+  },
+  {
+    "name": "Île Norfolk",
+    "nativeName": "Norfolk Island",
+    "iso2": "NF",
+    "iso3": "NFK",
+    "dialCode": "+672",
+    "flagEmoji": "🇳🇫"
+  },
+  {
+    "name": "Îles Caïmans",
+    "nativeName": "Cayman Islands",
+    "iso2": "KY",
+    "iso3": "CYM",
+    "dialCode": "+1345",
+    "flagEmoji": "🇰🇾"
+  },
+  {
+    "name": "Îles Cocos",
+    "nativeName": "Cocos (Keeling) Islands",
+    "iso2": "CC",
+    "iso3": "CCK",
+    "dialCode": "+61",
+    "flagEmoji": "🇨🇨"
+  },
+  {
+    "name": "Îles Cook",
+    "nativeName": "Cook Islands",
+    "iso2": "CK",
+    "iso3": "COK",
+    "dialCode": "+682",
+    "flagEmoji": "🇨🇰"
+  },
+  {
+    "name": "Îles Féroé",
+    "nativeName": "Føroyar",
+    "iso2": "FO",
+    "iso3": "FRO",
+    "dialCode": "+298",
+    "flagEmoji": "🇫🇴"
+  },
+  {
+    "name": "Îles Heard-et-MacDonald",
+    "nativeName": "Heard Island and McDonald Islands",
+    "iso2": "HM",
+    "iso3": "HMD",
+    "dialCode": "",
+    "flagEmoji": "🇭🇲"
+  },
+  {
+    "name": "Îles Malouines",
+    "nativeName": "Falkland Islands",
+    "iso2": "FK",
+    "iso3": "FLK",
+    "dialCode": "+500",
+    "flagEmoji": "🇫🇰"
+  },
+  {
+    "name": "Îles Mariannes du Nord",
+    "nativeName": "Northern Mariana Islands",
+    "iso2": "MP",
+    "iso3": "MNP",
+    "dialCode": "+1670",
+    "flagEmoji": "🇲🇵"
+  },
+  {
+    "name": "Îles Marshall",
+    "nativeName": "M̧ajeļ",
+    "iso2": "MH",
+    "iso3": "MHL",
+    "dialCode": "+692",
+    "flagEmoji": "🇲🇭"
+  },
+  {
+    "name": "Îles Pitcairn",
+    "nativeName": "Pitcairn Islands",
+    "iso2": "PN",
+    "iso3": "PCN",
+    "dialCode": "+64",
+    "flagEmoji": "🇵🇳"
+  },
+  {
+    "name": "Îles Salomon",
+    "nativeName": "Solomon Islands",
+    "iso2": "SB",
+    "iso3": "SLB",
+    "dialCode": "+677",
+    "flagEmoji": "🇸🇧"
+  },
+  {
+    "name": "Inde",
+    "nativeName": "भारत",
+    "iso2": "IN",
+    "iso3": "IND",
+    "dialCode": "+91",
+    "flagEmoji": "🇮🇳"
+  },
+  {
+    "name": "Indonésie",
+    "nativeName": "Indonesia",
+    "iso2": "ID",
+    "iso3": "IDN",
+    "dialCode": "+62",
+    "flagEmoji": "🇮🇩"
+  },
+  {
+    "name": "Irak",
+    "nativeName": "العراق",
+    "iso2": "IQ",
+    "iso3": "IRQ",
+    "dialCode": "+964",
+    "flagEmoji": "🇮🇶"
+  },
+  {
+    "name": "Iran",
+    "nativeName": "Irān",
+    "iso2": "IR",
+    "iso3": "IRN",
+    "dialCode": "+98",
+    "flagEmoji": "🇮🇷"
+  },
+  {
+    "name": "Irlande",
+    "nativeName": "Éire",
+    "iso2": "IE",
+    "iso3": "IRL",
+    "dialCode": "+353",
+    "flagEmoji": "🇮🇪"
+  },
+  {
+    "name": "Islande",
+    "nativeName": "Ísland",
+    "iso2": "IS",
+    "iso3": "ISL",
+    "dialCode": "+354",
+    "flagEmoji": "🇮🇸"
+  },
+  {
+    "name": "Israël",
+    "nativeName": "יִשְׂרָאֵל",
+    "iso2": "IL",
+    "iso3": "ISR",
+    "dialCode": "+972",
+    "flagEmoji": "🇮🇱"
+  },
+  {
+    "name": "Italie",
+    "nativeName": "Italia",
+    "iso2": "IT",
+    "iso3": "ITA",
+    "dialCode": "+39",
+    "flagEmoji": "🇮🇹"
+  },
+  {
+    "name": "Jamaïque",
+    "nativeName": "Jamaica",
+    "iso2": "JM",
+    "iso3": "JAM",
+    "dialCode": "+1876",
+    "flagEmoji": "🇯🇲"
+  },
+  {
+    "name": "Japon",
+    "nativeName": "日本",
+    "iso2": "JP",
+    "iso3": "JPN",
+    "dialCode": "+81",
+    "flagEmoji": "🇯🇵"
+  },
+  {
+    "name": "Jersey",
+    "nativeName": "Jersey",
+    "iso2": "JE",
+    "iso3": "JEY",
+    "dialCode": "+44",
+    "flagEmoji": "🇯🇪"
+  },
+  {
+    "name": "Jordanie",
+    "nativeName": "الأردن",
+    "iso2": "JO",
+    "iso3": "JOR",
+    "dialCode": "+962",
+    "flagEmoji": "🇯🇴"
+  },
+  {
+    "name": "Kazakhstan",
+    "nativeName": "Қазақстан",
+    "iso2": "KZ",
+    "iso3": "KAZ",
+    "dialCode": "+76",
+    "flagEmoji": "🇰🇿"
+  },
+  {
+    "name": "Kenya",
+    "nativeName": "Kenya",
+    "iso2": "KE",
+    "iso3": "KEN",
+    "dialCode": "+254",
+    "flagEmoji": "🇰🇪"
+  },
+  {
+    "name": "Kirghizstan",
+    "nativeName": "Кыргызстан",
+    "iso2": "KG",
+    "iso3": "KGZ",
+    "dialCode": "+996",
+    "flagEmoji": "🇰🇬"
+  },
+  {
+    "name": "Kiribati",
+    "nativeName": "Kiribati",
+    "iso2": "KI",
+    "iso3": "KIR",
+    "dialCode": "+686",
+    "flagEmoji": "🇰🇮"
+  },
+  {
+    "name": "Koweït",
+    "nativeName": "الكويت",
+    "iso2": "KW",
+    "iso3": "KWT",
+    "dialCode": "+965",
+    "flagEmoji": "🇰🇼"
+  },
+  {
+    "name": "La Réunion",
+    "nativeName": "La Réunion",
+    "iso2": "RE",
+    "iso3": "REU",
+    "dialCode": "+262",
+    "flagEmoji": "🇷🇪"
+  },
+  {
+    "name": "Laos",
+    "nativeName": "ສປປລາວ",
+    "iso2": "LA",
+    "iso3": "LAO",
+    "dialCode": "+856",
+    "flagEmoji": "🇱🇦"
+  },
+  {
+    "name": "Lesotho",
+    "nativeName": "Lesotho",
+    "iso2": "LS",
+    "iso3": "LSO",
+    "dialCode": "+266",
+    "flagEmoji": "🇱🇸"
+  },
+  {
+    "name": "Lettonie",
+    "nativeName": "Latvija",
+    "iso2": "LV",
+    "iso3": "LVA",
+    "dialCode": "+371",
+    "flagEmoji": "🇱🇻"
+  },
+  {
+    "name": "Liban",
+    "nativeName": "لبنان",
+    "iso2": "LB",
+    "iso3": "LBN",
+    "dialCode": "+961",
+    "flagEmoji": "🇱🇧"
+  },
+  {
+    "name": "Liberia",
+    "nativeName": "Liberia",
+    "iso2": "LR",
+    "iso3": "LBR",
+    "dialCode": "+231",
+    "flagEmoji": "🇱🇷"
+  },
+  {
+    "name": "Libye",
+    "nativeName": "‏ليبيا",
+    "iso2": "LY",
+    "iso3": "LBY",
+    "dialCode": "+218",
+    "flagEmoji": "🇱🇾"
+  },
+  {
+    "name": "Liechtenstein",
+    "nativeName": "Liechtenstein",
+    "iso2": "LI",
+    "iso3": "LIE",
+    "dialCode": "+423",
+    "flagEmoji": "🇱🇮"
+  },
+  {
+    "name": "Lituanie",
+    "nativeName": "Lietuva",
+    "iso2": "LT",
+    "iso3": "LTU",
+    "dialCode": "+370",
+    "flagEmoji": "🇱🇹"
+  },
+  {
+    "name": "Luxembourg",
+    "nativeName": "Luxembourg",
+    "iso2": "LU",
+    "iso3": "LUX",
+    "dialCode": "+352",
+    "flagEmoji": "🇱🇺"
+  },
+  {
+    "name": "Macédoine du Nord",
+    "nativeName": "Македонија",
+    "iso2": "MK",
+    "iso3": "MKD",
+    "dialCode": "+389",
+    "flagEmoji": "🇲🇰"
+  },
+  {
+    "name": "Madagascar",
+    "nativeName": "Madagasikara",
+    "iso2": "MG",
+    "iso3": "MDG",
+    "dialCode": "+261",
+    "flagEmoji": "🇲🇬"
+  },
+  {
+    "name": "Malaisie",
+    "nativeName": "Malaysia",
+    "iso2": "MY",
+    "iso3": "MYS",
+    "dialCode": "+60",
+    "flagEmoji": "🇲🇾"
+  },
+  {
+    "name": "Malawi",
+    "nativeName": "Malawi",
+    "iso2": "MW",
+    "iso3": "MWI",
+    "dialCode": "+265",
+    "flagEmoji": "🇲🇼"
+  },
+  {
+    "name": "Maldives",
+    "nativeName": "Maldives",
+    "iso2": "MV",
+    "iso3": "MDV",
+    "dialCode": "+960",
+    "flagEmoji": "🇲🇻"
+  },
+  {
+    "name": "Mali",
+    "nativeName": "Mali",
+    "iso2": "ML",
+    "iso3": "MLI",
+    "dialCode": "+223",
+    "flagEmoji": "🇲🇱"
+  },
+  {
+    "name": "Malte",
+    "nativeName": "Malta",
+    "iso2": "MT",
+    "iso3": "MLT",
+    "dialCode": "+356",
+    "flagEmoji": "🇲🇹"
+  },
+  {
+    "name": "Maroc",
+    "nativeName": "المغرب",
+    "iso2": "MA",
+    "iso3": "MAR",
+    "dialCode": "+212",
+    "flagEmoji": "🇲🇦"
+  },
+  {
+    "name": "Martinique",
+    "nativeName": "Martinique",
+    "iso2": "MQ",
+    "iso3": "MTQ",
+    "dialCode": "+596",
+    "flagEmoji": "🇲🇶"
+  },
+  {
+    "name": "Maurice",
+    "nativeName": "Maurice",
+    "iso2": "MU",
+    "iso3": "MUS",
+    "dialCode": "+230",
+    "flagEmoji": "🇲🇺"
+  },
+  {
+    "name": "Mauritanie",
+    "nativeName": "موريتانيا",
+    "iso2": "MR",
+    "iso3": "MRT",
+    "dialCode": "+222",
+    "flagEmoji": "🇲🇷"
+  },
+  {
+    "name": "Mayotte",
+    "nativeName": "Mayotte",
+    "iso2": "YT",
+    "iso3": "MYT",
+    "dialCode": "+262",
+    "flagEmoji": "🇾🇹"
+  },
+  {
+    "name": "Mexique",
+    "nativeName": "México",
+    "iso2": "MX",
+    "iso3": "MEX",
+    "dialCode": "+52",
+    "flagEmoji": "🇲🇽"
+  },
+  {
+    "name": "Micronésie",
+    "nativeName": "Micronesia",
+    "iso2": "FM",
+    "iso3": "FSM",
+    "dialCode": "+691",
+    "flagEmoji": "🇫🇲"
+  },
+  {
+    "name": "Moldavie",
+    "nativeName": "Moldova",
+    "iso2": "MD",
+    "iso3": "MDA",
+    "dialCode": "+373",
+    "flagEmoji": "🇲🇩"
+  },
+  {
+    "name": "Monaco",
+    "nativeName": "Monaco",
+    "iso2": "MC",
+    "iso3": "MCO",
+    "dialCode": "+377",
+    "flagEmoji": "🇲🇨"
+  },
+  {
+    "name": "Mongolie",
+    "nativeName": "Монгол улс",
+    "iso2": "MN",
+    "iso3": "MNG",
+    "dialCode": "+976",
+    "flagEmoji": "🇲🇳"
+  },
+  {
+    "name": "Montserrat",
+    "nativeName": "Montserrat",
+    "iso2": "MS",
+    "iso3": "MSR",
+    "dialCode": "+1664",
+    "flagEmoji": "🇲🇸"
+  },
+  {
+    "name": "Mozambique",
+    "nativeName": "Moçambique",
+    "iso2": "MZ",
+    "iso3": "MOZ",
+    "dialCode": "+258",
+    "flagEmoji": "🇲🇿"
+  },
+  {
+    "name": "Namibie",
+    "nativeName": "Namibia",
+    "iso2": "NA",
+    "iso3": "NAM",
+    "dialCode": "+264",
+    "flagEmoji": "🇳🇦"
+  },
+  {
+    "name": "Nauru",
+    "nativeName": "Nauru",
+    "iso2": "NR",
+    "iso3": "NRU",
+    "dialCode": "+674",
+    "flagEmoji": "🇳🇷"
+  },
+  {
+    "name": "Népal",
+    "nativeName": "नेपाल",
+    "iso2": "NP",
+    "iso3": "NPL",
+    "dialCode": "+977",
+    "flagEmoji": "🇳🇵"
+  },
+  {
+    "name": "Nicaragua",
+    "nativeName": "Nicaragua",
+    "iso2": "NI",
+    "iso3": "NIC",
+    "dialCode": "+505",
+    "flagEmoji": "🇳🇮"
+  },
+  {
+    "name": "Niger",
+    "nativeName": "Niger",
+    "iso2": "NE",
+    "iso3": "NER",
+    "dialCode": "+227",
+    "flagEmoji": "🇳🇪"
+  },
+  {
+    "name": "Nigeria",
+    "nativeName": "Nigeria",
+    "iso2": "NG",
+    "iso3": "NGA",
+    "dialCode": "+234",
+    "flagEmoji": "🇳🇬"
+  },
+  {
+    "name": "Niue",
+    "nativeName": "Niuē",
+    "iso2": "NU",
+    "iso3": "NIU",
+    "dialCode": "+683",
+    "flagEmoji": "🇳🇺"
+  },
+  {
+    "name": "Norvège",
+    "nativeName": "Norge",
+    "iso2": "NO",
+    "iso3": "NOR",
+    "dialCode": "+47",
+    "flagEmoji": "🇳🇴"
+  },
+  {
+    "name": "Nouvelle-Calédonie",
+    "nativeName": "Nouvelle-Calédonie",
+    "iso2": "NC",
+    "iso3": "NCL",
+    "dialCode": "+687",
+    "flagEmoji": "🇳🇨"
+  },
+  {
+    "name": "Nouvelle-Zélande",
+    "nativeName": "New Zealand",
+    "iso2": "NZ",
+    "iso3": "NZL",
+    "dialCode": "+64",
+    "flagEmoji": "🇳🇿"
+  },
+  {
+    "name": "Oman",
+    "nativeName": "عمان",
+    "iso2": "OM",
+    "iso3": "OMN",
+    "dialCode": "+968",
+    "flagEmoji": "🇴🇲"
+  },
+  {
+    "name": "Ouganda",
+    "nativeName": "Uganda",
+    "iso2": "UG",
+    "iso3": "UGA",
+    "dialCode": "+256",
+    "flagEmoji": "🇺🇬"
+  },
+  {
+    "name": "Ouzbékistan",
+    "nativeName": "O‘zbekiston",
+    "iso2": "UZ",
+    "iso3": "UZB",
+    "dialCode": "+998",
+    "flagEmoji": "🇺🇿"
+  },
+  {
+    "name": "Pakistan",
+    "nativeName": "Pakistan",
+    "iso2": "PK",
+    "iso3": "PAK",
+    "dialCode": "+92",
+    "flagEmoji": "🇵🇰"
+  },
+  {
+    "name": "Palaos",
+    "nativeName": "Palau",
+    "iso2": "PW",
+    "iso3": "PLW",
+    "dialCode": "+680",
+    "flagEmoji": "🇵🇼"
+  },
+  {
+    "name": "Panama",
+    "nativeName": "Panamá",
+    "iso2": "PA",
+    "iso3": "PAN",
+    "dialCode": "+507",
+    "flagEmoji": "🇵🇦"
+  },
+  {
+    "name": "Papouasie-Nouvelle-Guinée",
+    "nativeName": "Papua Niugini",
+    "iso2": "PG",
+    "iso3": "PNG",
+    "dialCode": "+675",
+    "flagEmoji": "🇵🇬"
+  },
+  {
+    "name": "Paraguay",
+    "nativeName": "Paraguay",
+    "iso2": "PY",
+    "iso3": "PRY",
+    "dialCode": "+595",
+    "flagEmoji": "🇵🇾"
+  },
+  {
+    "name": "Pays-Bas",
+    "nativeName": "Nederland",
+    "iso2": "NL",
+    "iso3": "NLD",
+    "dialCode": "+31",
+    "flagEmoji": "🇳🇱"
+  },
+  {
+    "name": "Pérou",
+    "nativeName": "Perú",
+    "iso2": "PE",
+    "iso3": "PER",
+    "dialCode": "+51",
+    "flagEmoji": "🇵🇪"
+  },
+  {
+    "name": "Philippines",
+    "nativeName": "Pilipinas",
+    "iso2": "PH",
+    "iso3": "PHL",
+    "dialCode": "+63",
+    "flagEmoji": "🇵🇭"
+  },
+  {
+    "name": "Pologne",
+    "nativeName": "Polska",
+    "iso2": "PL",
+    "iso3": "POL",
+    "dialCode": "+48",
+    "flagEmoji": "🇵🇱"
+  },
+  {
+    "name": "Polynésie française",
+    "nativeName": "Polynésie française",
+    "iso2": "PF",
+    "iso3": "PYF",
+    "dialCode": "+689",
+    "flagEmoji": "🇵🇫"
+  },
+  {
+    "name": "Porto Rico",
+    "nativeName": "Puerto Rico",
+    "iso2": "PR",
+    "iso3": "PRI",
+    "dialCode": "+1787",
+    "flagEmoji": "🇵🇷"
+  },
+  {
+    "name": "Portugal",
+    "nativeName": "Portugal",
+    "iso2": "PT",
+    "iso3": "PRT",
+    "dialCode": "+351",
+    "flagEmoji": "🇵🇹"
+  },
+  {
+    "name": "Qatar",
+    "nativeName": "قطر",
+    "iso2": "QA",
+    "iso3": "QAT",
+    "dialCode": "+974",
+    "flagEmoji": "🇶🇦"
+  },
+  {
+    "name": "R.A.S. chinoise de Hong Kong",
+    "nativeName": "香港",
+    "iso2": "HK",
+    "iso3": "HKG",
+    "dialCode": "+852",
+    "flagEmoji": "🇭🇰"
+  },
+  {
+    "name": "R.A.S. chinoise de Macao",
+    "nativeName": "澳門",
+    "iso2": "MO",
+    "iso3": "MAC",
+    "dialCode": "+853",
+    "flagEmoji": "🇲🇴"
+  },
+  {
+    "name": "République centrafricaine",
+    "nativeName": "Ködörösêse tî Bêafrîka",
+    "iso2": "CF",
+    "iso3": "CAF",
+    "dialCode": "+236",
+    "flagEmoji": "🇨🇫"
+  },
+  {
+    "name": "République dominicaine",
+    "nativeName": "República Dominicana",
+    "iso2": "DO",
+    "iso3": "DOM",
+    "dialCode": "+1809",
+    "flagEmoji": "🇩🇴"
+  },
+  {
+    "name": "Roumanie",
+    "nativeName": "România",
+    "iso2": "RO",
+    "iso3": "ROU",
+    "dialCode": "+40",
+    "flagEmoji": "🇷🇴"
+  },
+  {
+    "name": "Royaume-Uni",
+    "nativeName": "United Kingdom",
+    "iso2": "GB",
+    "iso3": "GBR",
+    "dialCode": "+44",
+    "flagEmoji": "🇬🇧"
+  },
+  {
+    "name": "Royaume-Uni",
+    "nativeName": "Wales",
+    "iso2": "GB",
+    "iso3": "GBR",
+    "dialCode": "",
+    "flagEmoji": "🇬🇧"
+  },
+  {
+    "name": "Russie",
+    "nativeName": "Россия",
+    "iso2": "RU",
+    "iso3": "RUS",
+    "dialCode": "+7",
+    "flagEmoji": "🇷🇺"
+  },
+  {
+    "name": "Rwanda",
+    "nativeName": "Rwanda",
+    "iso2": "RW",
+    "iso3": "RWA",
+    "dialCode": "+250",
+    "flagEmoji": "🇷🇼"
+  },
+  {
+    "name": "Sahara occidental",
+    "nativeName": "الصحراء الغربية",
+    "iso2": "EH",
+    "iso3": "ESH",
+    "dialCode": "+212",
+    "flagEmoji": "🇪🇭"
+  },
+  {
+    "name": "Saint-Christophe-et-Niévès",
+    "nativeName": "Saint Kitts and Nevis",
+    "iso2": "KN",
+    "iso3": "KNA",
+    "dialCode": "+1869",
+    "flagEmoji": "🇰🇳"
+  },
+  {
+    "name": "Saint-Marin",
+    "nativeName": "San Marino",
+    "iso2": "SM",
+    "iso3": "SMR",
+    "dialCode": "+378",
+    "flagEmoji": "🇸🇲"
+  },
+  {
+    "name": "Saint-Pierre-et-Miquelon",
+    "nativeName": "Saint-Pierre-et-Miquelon",
+    "iso2": "PM",
+    "iso3": "SPM",
+    "dialCode": "+508",
+    "flagEmoji": "🇵🇲"
+  },
+  {
+    "name": "Saint-Vincent-et-les Grenadines",
+    "nativeName": "Saint Vincent and the Grenadines",
+    "iso2": "VC",
+    "iso3": "VCT",
+    "dialCode": "+1784",
+    "flagEmoji": "🇻🇨"
+  },
+  {
+    "name": "Sainte-Hélène",
+    "nativeName": "Saint Helena",
+    "iso2": "SH",
+    "iso3": "SHN",
+    "dialCode": "+290",
+    "flagEmoji": "🇸🇭"
+  },
+  {
+    "name": "Sainte-Lucie",
+    "nativeName": "Saint Lucia",
+    "iso2": "LC",
+    "iso3": "LCA",
+    "dialCode": "+1758",
+    "flagEmoji": "🇱🇨"
+  },
+  {
+    "name": "Salvador",
+    "nativeName": "El Salvador",
+    "iso2": "SV",
+    "iso3": "SLV",
+    "dialCode": "+503",
+    "flagEmoji": "🇸🇻"
+  },
+  {
+    "name": "Samoa",
+    "nativeName": "Samoa",
+    "iso2": "WS",
+    "iso3": "WSM",
+    "dialCode": "+685",
+    "flagEmoji": "🇼🇸"
+  },
+  {
+    "name": "Samoa américaines",
+    "nativeName": "American Samoa",
+    "iso2": "AS",
+    "iso3": "ASM",
+    "dialCode": "+1684",
+    "flagEmoji": "🇦🇸"
+  },
+  {
+    "name": "Sao Tomé-et-Principe",
+    "nativeName": "São Tomé e Príncipe",
+    "iso2": "ST",
+    "iso3": "STP",
+    "dialCode": "+239",
+    "flagEmoji": "🇸🇹"
+  },
+  {
+    "name": "Sénégal",
+    "nativeName": "Sénégal",
+    "iso2": "SN",
+    "iso3": "SEN",
+    "dialCode": "+221",
+    "flagEmoji": "🇸🇳"
+  },
+  {
+    "name": "Serbie",
+    "nativeName": "Srbija",
+    "iso2": "RS",
+    "iso3": "SRB",
+    "dialCode": "+381",
+    "flagEmoji": "🇷🇸"
+  },
+  {
+    "name": "Seychelles",
+    "nativeName": "Seychelles",
+    "iso2": "SC",
+    "iso3": "SYC",
+    "dialCode": "+248",
+    "flagEmoji": "🇸🇨"
+  },
+  {
+    "name": "Sierra Leone",
+    "nativeName": "Sierra Leone",
+    "iso2": "SL",
+    "iso3": "SLE",
+    "dialCode": "+232",
+    "flagEmoji": "🇸🇱"
+  },
+  {
+    "name": "Singapour",
+    "nativeName": "Singapore",
+    "iso2": "SG",
+    "iso3": "SGP",
+    "dialCode": "+65",
+    "flagEmoji": "🇸🇬"
+  },
+  {
+    "name": "Slovaquie",
+    "nativeName": "Slovensko",
+    "iso2": "SK",
+    "iso3": "SVK",
+    "dialCode": "+421",
+    "flagEmoji": "🇸🇰"
+  },
+  {
+    "name": "Slovénie",
+    "nativeName": "Slovenija",
+    "iso2": "SI",
+    "iso3": "SVN",
+    "dialCode": "+386",
+    "flagEmoji": "🇸🇮"
+  },
+  {
+    "name": "Somalie",
+    "nativeName": "Soomaaliya",
+    "iso2": "SO",
+    "iso3": "SOM",
+    "dialCode": "+252",
+    "flagEmoji": "🇸🇴"
+  },
+  {
+    "name": "Soudan",
+    "nativeName": "السودان",
+    "iso2": "SD",
+    "iso3": "SDN",
+    "dialCode": "+249",
+    "flagEmoji": "🇸🇩"
+  },
+  {
+    "name": "Soudan du Sud",
+    "nativeName": "South Sudan",
+    "iso2": "SS",
+    "iso3": "SSD",
+    "dialCode": "+211",
+    "flagEmoji": "🇸🇸"
+  },
+  {
+    "name": "Sri Lanka",
+    "nativeName": "śrī laṃkāva",
+    "iso2": "LK",
+    "iso3": "LKA",
+    "dialCode": "+94",
+    "flagEmoji": "🇱🇰"
+  },
+  {
+    "name": "Suède",
+    "nativeName": "Sverige",
+    "iso2": "SE",
+    "iso3": "SWE",
+    "dialCode": "+46",
+    "flagEmoji": "🇸🇪"
+  },
+  {
+    "name": "Suisse",
+    "nativeName": "Schweiz",
+    "iso2": "CH",
+    "iso3": "CHE",
+    "dialCode": "+41",
+    "flagEmoji": "🇨🇭"
+  },
+  {
+    "name": "Suriname",
+    "nativeName": "Suriname",
+    "iso2": "SR",
+    "iso3": "SUR",
+    "dialCode": "+597",
+    "flagEmoji": "🇸🇷"
+  },
+  {
+    "name": "Svalbard et Jan Mayen",
+    "nativeName": "Svalbard og Jan Mayen",
+    "iso2": "SJ",
+    "iso3": "SJM",
+    "dialCode": "+4779",
+    "flagEmoji": "🇸🇯"
+  },
+  {
+    "name": "Syrie",
+    "nativeName": "سوريا",
+    "iso2": "SY",
+    "iso3": "SYR",
+    "dialCode": "+963",
+    "flagEmoji": "🇸🇾"
+  },
+  {
+    "name": "Tadjikistan",
+    "nativeName": "Тоҷикистон",
+    "iso2": "TJ",
+    "iso3": "TJK",
+    "dialCode": "+992",
+    "flagEmoji": "🇹🇯"
+  },
+  {
+    "name": "Taïwan",
+    "nativeName": "臺灣",
+    "iso2": "TW",
+    "iso3": "TWN",
+    "dialCode": "+886",
+    "flagEmoji": "🇹🇼"
+  },
+  {
+    "name": "Tanzanie",
+    "nativeName": "Tanzania",
+    "iso2": "TZ",
+    "iso3": "TZA",
+    "dialCode": "+255",
+    "flagEmoji": "🇹🇿"
+  },
+  {
+    "name": "Tchad",
+    "nativeName": "Tchad",
+    "iso2": "TD",
+    "iso3": "TCD",
+    "dialCode": "+235",
+    "flagEmoji": "🇹🇩"
+  },
+  {
+    "name": "Tchéquie",
+    "nativeName": "Česká republika",
+    "iso2": "CZ",
+    "iso3": "CZE",
+    "dialCode": "+420",
+    "flagEmoji": "🇨🇿"
+  },
+  {
+    "name": "Terres australes françaises",
+    "nativeName": "Territoire des Terres australes et antarctiques françaises",
+    "iso2": "TF",
+    "iso3": "ATF",
+    "dialCode": "",
+    "flagEmoji": "🇹🇫"
+  },
+  {
+    "name": "Territoire britannique de l’océan Indien",
+    "nativeName": "British Indian Ocean Territory",
+    "iso2": "IO",
+    "iso3": "IOT",
+    "dialCode": "+246",
+    "flagEmoji": "🇮🇴"
+  },
+  {
+    "name": "Thaïlande",
+    "nativeName": "ประเทศไทย",
+    "iso2": "TH",
+    "iso3": "THA",
+    "dialCode": "+66",
+    "flagEmoji": "🇹🇭"
+  },
+  {
+    "name": "Timor oriental",
+    "nativeName": "Timor-Leste",
+    "iso2": "TL",
+    "iso3": "TLS",
+    "dialCode": "+670",
+    "flagEmoji": "🇹🇱"
+  },
+  {
+    "name": "Togo",
+    "nativeName": "Togo",
+    "iso2": "TG",
+    "iso3": "TGO",
+    "dialCode": "+228",
+    "flagEmoji": "🇹🇬"
+  },
+  {
+    "name": "Tokelau",
+    "nativeName": "Tokelau",
+    "iso2": "TK",
+    "iso3": "TKL",
+    "dialCode": "+690",
+    "flagEmoji": "🇹🇰"
+  },
+  {
+    "name": "Tonga",
+    "nativeName": "Tonga",
+    "iso2": "TO",
+    "iso3": "TON",
+    "dialCode": "+676",
+    "flagEmoji": "🇹🇴"
+  },
+  {
+    "name": "Trinité-et-Tobago",
+    "nativeName": "Trinidad and Tobago",
+    "iso2": "TT",
+    "iso3": "TTO",
+    "dialCode": "+1868",
+    "flagEmoji": "🇹🇹"
+  },
+  {
+    "name": "Tunisie",
+    "nativeName": "تونس",
+    "iso2": "TN",
+    "iso3": "TUN",
+    "dialCode": "+216",
+    "flagEmoji": "🇹🇳"
+  },
+  {
+    "name": "Turkménistan",
+    "nativeName": "Türkmenistan",
+    "iso2": "TM",
+    "iso3": "TKM",
+    "dialCode": "+993",
+    "flagEmoji": "🇹🇲"
+  },
+  {
+    "name": "Turquie",
+    "nativeName": "Türkiye",
+    "iso2": "TR",
+    "iso3": "TUR",
+    "dialCode": "+90",
+    "flagEmoji": "🇹🇷"
+  },
+  {
+    "name": "Tuvalu",
+    "nativeName": "Tuvalu",
+    "iso2": "TV",
+    "iso3": "TUV",
+    "dialCode": "+688",
+    "flagEmoji": "🇹🇻"
+  },
+  {
+    "name": "Ukraine",
+    "nativeName": "Україна",
+    "iso2": "UA",
+    "iso3": "UKR",
+    "dialCode": "+380",
+    "flagEmoji": "🇺🇦"
+  },
+  {
+    "name": "Uruguay",
+    "nativeName": "Uruguay",
+    "iso2": "UY",
+    "iso3": "URY",
+    "dialCode": "+598",
+    "flagEmoji": "🇺🇾"
+  },
+  {
+    "name": "Vanuatu",
+    "nativeName": "Vanuatu",
+    "iso2": "VU",
+    "iso3": "VUT",
+    "dialCode": "+678",
+    "flagEmoji": "🇻🇺"
+  },
+  {
+    "name": "Venezuela",
+    "nativeName": "Venezuela",
+    "iso2": "VE",
+    "iso3": "VEN",
+    "dialCode": "+58",
+    "flagEmoji": "🇻🇪"
+  },
+  {
+    "name": "Viêt Nam",
+    "nativeName": "Việt Nam",
+    "iso2": "VN",
+    "iso3": "VNM",
+    "dialCode": "+84",
+    "flagEmoji": "🇻🇳"
+  },
+  {
+    "name": "Wallis-et-Futuna",
+    "nativeName": "Wallis et Futuna",
+    "iso2": "WF",
+    "iso3": "WLF",
+    "dialCode": "+681",
+    "flagEmoji": "🇼🇫"
+  },
+  {
+    "name": "Yémen",
+    "nativeName": "اليَمَن",
+    "iso2": "YE",
+    "iso3": "YEM",
+    "dialCode": "+967",
+    "flagEmoji": "🇾🇪"
+  },
+  {
+    "name": "Zambie",
+    "nativeName": "Zambia",
+    "iso2": "ZM",
+    "iso3": "ZMB",
+    "dialCode": "+260",
+    "flagEmoji": "🇿🇲"
+  },
+  {
+    "name": "Zimbabwe",
+    "nativeName": "Zimbabwe",
+    "iso2": "ZW",
+    "iso3": "ZWE",
+    "dialCode": "+263",
+    "flagEmoji": "🇿🇼"
+  }
+]

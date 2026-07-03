@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="AkengCountryPicker.Controls.CountryPickerView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="root">
+
+    <VerticalStackLayout Spacing="8">
+
+        <SearchBar
+            x:Name="SearchCountryBar"
+            IsVisible="{Binding ShowSearchBar, Source={x:Reference root}}"
+            Placeholder="{Binding Placeholder, Source={x:Reference root}}"
+            Text="{Binding SearchText, Source={x:Reference root}, Mode=TwoWay}"
+            TextChanged="OnSearchTextChanged" />
+
+        <Label
+            x:Name="EmptyMessageLabel"
+            HorizontalOptions="Center"
+            IsVisible="False"
+            Text="{Binding EmptyMessage, Source={x:Reference root}}"
+            TextColor="Gray" />
+
+        <CollectionView
+            x:Name="CountriesCollectionView"
+            SelectionChanged="OnCountrySelected"
+            SelectionMode="Single">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10" ColumnDefinitions="Auto,*,Auto">
+                        <Label
+                            Grid.Column="0"
+                            FontSize="24"
+                            Text="{Binding FlagEmoji}" />
+
+                        <Label
+                            Grid.Column="1"
+                            Margin="12,0"
+                            FontSize="16"
+                            Text="{Binding Name}"
+                            VerticalOptions="Center" />
+
+                        <Label
+                            Grid.Column="2"
+                            FontSize="16"
+                            IsVisible="{Binding ShowDialCode, Source={x:Reference Root}}"
+                            Text="{Binding DialCode}"
+                            VerticalOptions="Center" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </VerticalStackLayout>
+</ContentView>

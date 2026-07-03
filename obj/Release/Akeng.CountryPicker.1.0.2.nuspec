@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Akeng.CountryPicker</id>
+    <version>1.0.2</version>
+    <authors>Ange Gabriel Belinga</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <description>Package .NET MAUI fournissant la liste des pays, indicatifs téléphoniques et drapeaux.</description>
+    <tags>maui countries flags phone dialcode</tags>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net9.0">
+        <dependency id="Microsoft.Maui.Controls" version="9.0.111" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\ZBook\source\repos\AkengCountryPicker\AkengCountryPicker\bin\Release\net9.0\AkengCountryPicker.dll" target="lib\net9.0\AkengCountryPicker.dll" />
+  </files>
+</package>

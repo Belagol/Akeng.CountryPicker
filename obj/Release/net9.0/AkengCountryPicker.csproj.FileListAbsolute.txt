@@ -1,0 +1,14 @@
+C:\Users\ZBook\source\repos\AkengCountryPicker\AkengCountryPicker\bin\Release\net9.0\Data\countries.json
+C:\Users\ZBook\source\repos\AkengCountryPicker\AkengCountryPicker\bin\Release\net9.0\AkengCountryPicker.deps.json
+C:\Users\ZBook\source\repos\AkengCountryPicker\AkengCountryPicker\bin\Release\net9.0\AkengCountryPicker.dll
+C:\Users\ZBook\source\repos\AkengCountryPicker\AkengCountryPicker\bin\Release\net9.0\AkengCountryPicker.pdb
+C:\Users\ZBook\source\repos\AkengCountryPicker\AkengCountryPicker\obj\Release\net9.0\AkengCountryPicker.csproj.AssemblyReference.cache
+C:\Users\ZBook\source\repos\AkengCountryPicker\AkengCountryPicker\obj\Release\net9.0\AkengCountryPicker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ZBook\source\repos\AkengCountryPicker\AkengCountryPicker\obj\Release\net9.0\AkengCountryPicker.AssemblyInfoInputs.cache
+C:\Users\ZBook\source\repos\AkengCountryPicker\AkengCountryPicker\obj\Release\net9.0\AkengCountryPicker.AssemblyInfo.cs
+C:\Users\ZBook\source\repos\AkengCountryPicker\AkengCountryPicker\obj\Release\net9.0\AkengCountryPicker.csproj.CoreCompileInputs.cache
+C:\Users\ZBook\source\repos\AkengCountryPicker\AkengCountryPicker\obj\Release\net9.0\XamlC.stamp
+C:\Users\ZBook\source\repos\AkengCountryPicker\AkengCountryPicker\obj\Release\net9.0\AkengCountryPicker.dll
+C:\Users\ZBook\source\repos\AkengCountryPicker\AkengCountryPicker\obj\Release\net9.0\refint\AkengCountryPicker.dll
+C:\Users\ZBook\source\repos\AkengCountryPicker\AkengCountryPicker\obj\Release\net9.0\AkengCountryPicker.pdb
+C:\Users\ZBook\source\repos\AkengCountryPicker\AkengCountryPicker\obj\Release\net9.0\ref\AkengCountryPicker.dll
