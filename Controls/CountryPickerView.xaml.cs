@@ -1,16 +1,18 @@
 using AkengCountryPicker.Models;
 using AkengCountryPicker.Services;
-using System.Collections.ObjectModel;
-using System.Data.SqlTypes;
 
 namespace AkengCountryPicker.Controls;
 
 public partial class CountryPickerView : ContentView
 {
     private readonly ICountryService _countryService;
-    private readonly ObservableCollection<CountryInfo> _countries = new();
+    private IReadOnlyList<CountryInfo> _allCountries = Array.Empty<CountryInfo>();
+    private CancellationTokenSource? _searchCancellationTokenSource;
+    private bool _isLoaded;
+
     public event EventHandler<CountryInfo>? CountrySelected;
 
+    #region Bindable properties
     public static readonly BindableProperty SelectedCountryProperty =
         BindableProperty.Create(
             nameof(SelectedCountry),
@@ -91,46 +93,152 @@ public partial class CountryPickerView : ContentView
         set => SetValue(EmptyMessageProperty, value);
     }
 
+    public static readonly BindableProperty ShowEmojiProperty =
+    BindableProperty.Create(
+        nameof(ShowEmoji),
+        typeof(bool),
+        typeof(CountryPickerView),
+        true);
+
+    public bool ShowEmoji
+    {
+        get => (bool)GetValue(ShowEmojiProperty);
+        set => SetValue(ShowEmojiProperty, value);
+    }
+
+    public static readonly BindableProperty ShowNativeNameProperty =
+    BindableProperty.Create(
+        nameof(ShowNativeName),
+        typeof(bool),
+        typeof(CountryPickerView),
+        true);
+
+    public bool ShowNativeName
+    {
+        get => (bool)GetValue(ShowNativeNameProperty);
+        set => SetValue(ShowNativeNameProperty, value);
+    }
+
+    public static readonly BindableProperty ShowIso2Property =
+    BindableProperty.Create(
+        nameof(ShowIso2),
+        typeof(bool),
+        typeof(CountryPickerView),
+        false);
+
+    public bool ShowIso2
+    {
+        get => (bool)GetValue(ShowIso2Property);
+        set => SetValue(ShowIso2Property, value);
+    }
+
+    public static readonly BindableProperty ShowIso3Property =
+        BindableProperty.Create(
+            nameof(ShowIso3),
+            typeof(bool),
+            typeof(CountryPickerView),
+            false);
+
+    public bool ShowIso3
+    {
+        get => (bool)GetValue(ShowIso3Property);
+        set => SetValue(ShowIso3Property, value);
+    }
+    #endregion
+
     public CountryPickerView()
 	{
 		InitializeComponent();
 
         _countryService = new CountryService();
 
-        CountriesCollectionView.ItemsSource = _countries;
+        Loaded += OnLoaded;
+        Loaded += OnUnloaded;
+    }
 
-        Loaded += async (_, _) => await LoadCountriesAsync();
+    private async void OnLoaded(object? sender, EventArgs e)
+    {
+        if (_isLoaded)
+            return;
+
+        _isLoaded = true;
+
+        try
+        {
+            await LoadCountriesAsync();
+        }
+        catch(Exception ex)
+        {
+            ApplyCountries(Array.Empty<CountryInfo>());
+        }
+    }
+
+    private void OnUnloaded(object? sender, EventArgs e)
+    {
+        _searchCancellationTokenSource?.Cancel();
+        _searchCancellationTokenSource?.Dispose();
+        _searchCancellationTokenSource = null;
     }
 
     private async Task LoadCountriesAsync()
     {
-        _countries.Clear();
-
         var countries = await _countryService.GetCountriesAsync();
 
-        foreach (var country in countries)
-            _countries.Add(country);
+        _allCountries = countries.OrderBy(c => c.Name).ToArray();
 
-        EmptyMessageLabel.IsVisible = _countries.Count == 0;
+        ApplyCountries(_allCountries);
+    }
+
+    private void ApplyCountries(IEnumerable<CountryInfo> countries)
+    {
+        var result = countries.ToArray();
+        CountriesCollectionView.ItemsSource = result;
+
+        EmptyMessageLabel.IsVisible = result.Length == 0;
     }
 
     private async void OnSearchTextChanged(object? sender, TextChangedEventArgs e)
     {
-        _countries.Clear();
+        _searchCancellationTokenSource?.Cancel();
+        _searchCancellationTokenSource?.Dispose();
 
-        var countries = await _countryService.SearchAsync(e.NewTextValue);
+        _searchCancellationTokenSource = new CancellationTokenSource();
 
-        foreach (var country in countries)
-            _countries.Add(country);
+        try
+        {
+            await Task.Delay(TimeSpan.FromMilliseconds(250), _searchCancellationTokenSource.Token);
 
-        EmptyMessageLabel.IsVisible = _countries.Count == 0;
+            var searchText = e.NewTextValue?.Trim();
+
+            if (string.IsNullOrWhiteSpace(searchText))
+            {
+                ApplyCountries(_allCountries);
+                return;
+            }
+
+            var result = _allCountries.Where(country =>
+                Contains(country.Name, searchText) ||
+                Contains(country.NativeName, searchText) ||
+                Contains(country.Iso2, searchText) ||
+                Contains(country.Iso3, searchText) ||
+                Contains(country.DialCode, searchText));
+
+            ApplyCountries(result);
+        }
+        catch (OperationCanceledException)
+        {
+            // Une nouvelle saisie a remplacé la précédente.
+        }
+    }
+
+    private static bool Contains(string? value, string searchText)
+    {
+        return !string.IsNullOrEmpty(value) && value.Contains(searchText, StringComparison.OrdinalIgnoreCase);
     }
 
     private void OnCountrySelected(object? sender, SelectionChangedEventArgs e)
     {
-        var country = e.CurrentSelection.FirstOrDefault() as CountryInfo;
-
-        if (country == null)
+        if (e.CurrentSelection.FirstOrDefault() is not CountryInfo country)
             return;
 
         SelectedCountry = country;

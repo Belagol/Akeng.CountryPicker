@@ -3,9 +3,11 @@
     x:Class="AkengCountryPicker.Controls.CountryPickerView"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:AkengCountryPicker.Controls"
+    xmlns:models="clr-namespace:AkengCountryPicker.Models"
     x:Name="root">
 
-    <VerticalStackLayout Spacing="8">
+    <Grid RowDefinitions="Auto,Auto,*" RowSpacing="8">
 
         <SearchBar
             x:Name="SearchCountryBar"
@@ -16,6 +18,7 @@
 
         <Label
             x:Name="EmptyMessageLabel"
+            Grid.Row="1"
             HorizontalOptions="Center"
             IsVisible="False"
             Text="{Binding EmptyMessage, Source={x:Reference root}}"
@@ -23,16 +26,91 @@
 
         <CollectionView
             x:Name="CountriesCollectionView"
+            Grid.Row="2"
+            ItemSizingStrategy="MeasureFirstItem"
             SelectionChanged="OnCountrySelected"
-            SelectionMode="Single">
+            SelectionMode="Single"
+            VerticalOptions="Fill">
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout ItemSpacing="0" Orientation="Vertical" />
+            </CollectionView.ItemsLayout>
 
             <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Grid Padding="10" ColumnDefinitions="Auto,*,Auto">
+                <DataTemplate x:DataType="models:CountryInfo">
+                    <Grid
+                        Padding="12,8"
+                        RowDefinitions="Auto,Auto"
+                        RowSpacing="3">
+
+                        <!--  Ligne principale  -->
+                        <HorizontalStackLayout
+                            Grid.Row="0"
+                            Spacing="10"
+                            VerticalOptions="Center">
+
+                            <Label
+                                FontSize="26"
+                                IsVisible="{Binding ShowEmoji, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                                Text="{Binding FlagEmoji}"
+                                VerticalOptions="Center" />
+
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="16"
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding Name}"
+                                VerticalOptions="Center" />
+
+                            <Label
+                                FontSize="15"
+                                HorizontalOptions="End"
+                                IsVisible="{Binding ShowDialCode, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                                Text="{Binding DialCode}"
+                                TextColor="{AppThemeBinding Light=#666666,
+                                                            Dark=#BDBDBD}"
+                                VerticalOptions="Center" />
+
+                        </HorizontalStackLayout>
+
+                        <!--  Ligne secondaire  -->
+                        <HorizontalStackLayout
+                            Grid.Row="1"
+                            Margin="36,0,0,0"
+                            Spacing="8">
+
+                            <Label
+                                FontSize="13"
+                                IsVisible="{Binding ShowNativeName, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                                Text="{Binding NativeName}"
+                                TextColor="{AppThemeBinding Light=#777777,
+                                                            Dark=#B0B0B0}" />
+
+                            <Label
+                                FontSize="13"
+                                IsVisible="{Binding ShowIso2, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                                Text="{Binding Iso2, StringFormat='ISO2: {0}'}"
+                                TextColor="{AppThemeBinding Light=#777777,
+                                                            Dark=#B0B0B0}" />
+
+                            <Label
+                                FontSize="13"
+                                IsVisible="{Binding ShowIso3, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                                Text="{Binding Iso3, StringFormat='ISO3: {0}'}"
+                                TextColor="{AppThemeBinding Light=#777777,
+                                                            Dark=#B0B0B0}" />
+
+                        </HorizontalStackLayout>
+                    </Grid>
+                    <!--<Grid
+                        Padding="10,4"
+                        ColumnDefinitions="40,*,Auto"
+                        HeightRequest="48">
                         <Label
                             Grid.Column="0"
                             FontSize="24"
-                            Text="{Binding FlagEmoji}" />
+                            Text="{Binding FlagEmoji}"
+                            VerticalOptions="Center" />
 
                         <Label
                             Grid.Column="1"
@@ -44,14 +122,14 @@
                         <Label
                             Grid.Column="2"
                             FontSize="16"
-                            IsVisible="{Binding ShowDialCode, Source={x:Reference Root}}"
+                            IsVisible="{Binding ShowDialCode, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
                             Text="{Binding DialCode}"
                             VerticalOptions="Center" />
-                    </Grid>
+                    </Grid>-->
                 </DataTemplate>
             </CollectionView.ItemTemplate>
 
         </CollectionView>
 
-    </VerticalStackLayout>
+    </Grid>
 </ContentView>

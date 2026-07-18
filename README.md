@@ -97,7 +97,6 @@ XAML
 ```xml
 <countryPicker:CountryPickerView
     SelectedCountry="{Binding SelectedCountry}"
-    DefaultCountryIso2="CM"
     ShowFlags="True"
     ShowDialCode="True"
     ShowSearchBar="True"/>
@@ -119,12 +118,14 @@ public CountryInfo? SelectedCountry
 
 | Property           | Default           | Description                     |
 |--------------------|-------------------|---------------------------------|
-| ShowFlags          | True              | Display country flags           |
+| ShowEmoji          | True              | Display country flags emoji     |
 | ShowDialCode       | True              | Display dialing codes           |
 | ShowSearchBar      | True              | Display search bar              |
 | Placeholder        | Search country... | Search placeholder              |
 | EmptyMessage       | No country found  | Message when no country matches |
-| DefaultCountryIso2 | Null              | Default selected country        |
+| ShowNativeName     | True              | Display native country name     |
+| ShowIso2           | False             | Display country iso2 code       |
+| ShowIso3           | False             | Display country iso3 code       |
 
 ---
 
@@ -160,6 +161,10 @@ public class CountryInfo
     public string DialCode { get; set; }
 
     public string FlagEmoji { get; set; }
+
+    public string FlagImage { get; set; }
+     
+    public string DisplayName => $"{FlagEmoji} {Name} ({DialCode})";
 }
 ```
 
@@ -177,7 +182,7 @@ Coming soon.
 - [x] Country picker
 - [x] Search
 - [x] Dialing codes
-- [ ] ISO2 / ISO3
+- [x] ISO2 / ISO3
 - [ ] SVG flags
 - [ ] Dark theme
 - [ ] Localization
@@ -213,4 +218,4 @@ MIT License
 
 ---
 
-Made with ❤️ by **Dr Ange Gabriel Belinga** using .NET MAUI
+Made with ❤️ by **Dr. Ange Gabriel Belinga** using .NET MAUI
