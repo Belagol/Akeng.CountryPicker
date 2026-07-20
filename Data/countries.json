@@ -688,14 +688,6 @@
     "flagEmoji": "🇭🇺"
   },
   {
-    "name": "Hongrie",
-    "nativeName": "Hongrie",
-    "iso2": "HU",
-    "iso3": "HUN",
-    "dialCode": "",
-    "flagEmoji": "🇭🇺"
-  },
-  {
     "name": "Île Christmas",
     "nativeName": "Christmas Island",
     "iso2": "CX",
@@ -1421,14 +1413,6 @@
     "iso2": "GB",
     "iso3": "GBR",
     "dialCode": "+44",
-    "flagEmoji": "🇬🇧"
-  },
-  {
-    "name": "Royaume-Uni",
-    "nativeName": "Wales",
-    "iso2": "GB",
-    "iso3": "GBR",
-    "dialCode": "",
     "flagEmoji": "🇬🇧"
   },
   {

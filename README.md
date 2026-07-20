@@ -22,6 +22,9 @@ A lightweight and customizable **.NET MAUI Country Picker** with support for:
 - ✅ Customizable UI
 - ✅ Dependency Injection support
 - ✅ Works on all .NET MAUI platforms
+- 🌍 Automatic country detection using the device's location (optional)
+- 🌐 Automatic country detection using the device's region settings
+- 🔒 No location permission required unless Geolocation mode is enabled
 
 ---
 
@@ -116,18 +119,64 @@ public CountryInfo? SelectedCountry
 
 # Customization
 
-| Property           | Default           | Description                     |
-|--------------------|-------------------|---------------------------------|
-| ShowEmoji          | True              | Display country flags emoji     |
-| ShowDialCode       | True              | Display dialing codes           |
-| ShowSearchBar      | True              | Display search bar              |
-| Placeholder        | Search country... | Search placeholder              |
-| EmptyMessage       | No country found  | Message when no country matches |
-| ShowNativeName     | True              | Display native country name     |
-| ShowIso2           | False             | Display country iso2 code       |
-| ShowIso3           | False             | Display country iso3 code       |
+| Property               | Default             | Description                     |
+|------------------------|---------------------|---------------------------------|
+| ShowEmoji              | True                | Display country flags emoji     |
+| ShowDialCode           | True                | Display dialing codes           |
+| ShowSearchBar          | True                | Display search bar              |
+| Placeholder            | Search country...   | Search placeholder              |
+| EmptyMessage           | No country found    | Message when no country matches |
+| ShowNativeName         | True                | Display native country name     |
+| ShowIso2               | False               | Display country iso2 code       |
+| ShowIso3               | False               | Display country iso3 code       |
+| DetectionMode          | None                | Country mode dectection         |
+| ShowFavorites          | True                | Show favorites countries        |
+| ShowRecentCountries    | True                | Show recent selected countries  |
+| AllowFavoriteSelection | True                | Allow favorites selection       |
+| MaxRecentCountries     | 5                   | Set maximum recent countries    |
 
 ---
+
+## 🌍 Automatic Country Detection (Geolocation)
+
+`CountryPickerView` can automatically select the user's current country based on the device's geographic location.
+
+```xml
+<countryPicker:CountryPickerView
+    DetectionMode="Geolocation" />
+```
+
+### Platform Permissions
+
+When using `DetectionMode="Geolocation"`, your application **must** request location permissions.
+
+### Android
+
+Add the following permissions to your **Platforms/Android/AndroidManifest.xml**:
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+```
+
+### iOS / Mac Catalyst
+
+Add the following key to your **Platforms/iOS/Info.plist** (and **Platforms/MacCatalyst/Info.plist** if applicable):
+
+```xml
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>This application uses your location to automatically select your current country.</string>
+```
+
+### Requesting Permission
+
+The Country Picker requests location permission only when `DetectionMode` is set to `Geolocation`.
+
+If the user denies the permission or the location cannot be determined, the picker simply loads the country list without selecting a default country.
+
+> **Note**
+> The package does **not** force location access. Applications that do not use `DetectionMode="Geolocation"` do not need to declare any location permissions.
+
 
 # Country Selected Event
 
@@ -185,9 +234,10 @@ Coming soon.
 - [x] ISO2 / ISO3
 - [ ] SVG flags
 - [ ] Dark theme
-- [ ] Localization
-- [ ] Favorite countries
-- [ ] Recent countries
+- [x] Localization
+- [x] Geolocation
+- [x] Favorite countries
+- [x] Recent countries
 - [ ] Country templates
 - [ ] PhoneEntry control
 

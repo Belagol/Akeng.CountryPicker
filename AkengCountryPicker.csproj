@@ -19,10 +19,10 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 
 		<PackageId>Akeng.CountryPicker</PackageId>
-		<Version>1.1.1</Version>
-		<PackageVersion>1.1.1</PackageVersion>
-		<AssemblyVersion>1.1.1</AssemblyVersion>
-		<FileVersion>1.1.0</FileVersion>
+		<Version>1.2.0</Version>
+		<PackageVersion>1.2.0</PackageVersion>
+		<AssemblyVersion>1.2.0</AssemblyVersion>
+		<FileVersion>1.1.2</FileVersion>
 		<Authors>Ange Gabriel Belinga</Authors>
 		<Company>Akeng</Company>
 		<Description>Package .NET MAUI fournissant la liste des pays, indicatifs téléphoniques et drapeaux.</Description>
@@ -56,6 +56,12 @@
 	  <MauiXaml Update="Controls\CountryPickerView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Platforms\Android\" />
+	  <Folder Include="Platforms\MacCatalyst\" />
+	  <Folder Include="Platforms\Windows\" />
 	</ItemGroup>
 
 </Project>

@@ -27,6 +27,104 @@
         <CollectionView
             x:Name="CountriesCollectionView"
             Grid.Row="2"
+            IsGrouped="True"
+            ItemSizingStrategy="MeasureFirstItem"
+            SelectionChanged="OnCountrySelected"
+            SelectionMode="Single">
+
+            <CollectionView.GroupHeaderTemplate>
+                <DataTemplate x:DataType="models:CountryGroup">
+                    <Grid Padding="12,10,12,6">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="14"
+                            Text="{Binding Title}"
+                            TextColor="{AppThemeBinding Light=#555555,
+                                                        Dark=#CCCCCC}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.GroupHeaderTemplate>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:CountryInfo">
+
+                    <Grid
+                        Padding="12,6"
+                        ColumnDefinitions="40,*,60,Auto,44"
+                        HeightRequest="52">
+
+                        <Label
+                            FontSize="24"
+                            IsVisible="{Binding ShowEmoji, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                            Text="{Binding FlagEmoji}"
+                            VerticalOptions="Center" />
+
+                        <VerticalStackLayout
+                            Grid.Column="1"
+                            Margin="8,0"
+                            Spacing="1"
+                            VerticalOptions="Center">
+
+                            <Label
+                                FontSize="16"
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding Name}" />
+
+                            <Label
+                                FontSize="12"
+                                IsVisible="{Binding ShowNativeName, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding NativeName}"
+                                TextColor="Gray" />
+
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout
+                            Grid.Column="2"
+                            Margin="8,0"
+                            Spacing="1"
+                            VerticalOptions="Center">
+
+                            <Label
+                                FontSize="13"
+                                IsVisible="{Binding ShowIso2, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                                Text="{Binding Iso2}"
+                                TextColor="Gray" />
+
+                            <Label
+                                FontSize="13"
+                                IsVisible="{Binding ShowIso3, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                                Text="{Binding Iso3}"
+                                TextColor="Gray" />
+
+                        </VerticalStackLayout>
+
+                        <Label
+                            Grid.Column="3"
+                            FontSize="15"
+                            IsVisible="{Binding ShowDialCode, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                            Text="{Binding DialCode}"
+                            VerticalOptions="Center" />
+
+                        <Button
+                            Grid.Column="4"
+                            Padding="0"
+                            BackgroundColor="Transparent"
+                            Clicked="OnFavoriteClicked"
+                            FontSize="22"
+                            IsVisible="{Binding AllowFavoriteSelection, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                            Text="{Binding FavoriteIcon}"
+                            VerticalOptions="Center" />
+
+                    </Grid>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!--<CollectionView
+            x:Name="CountriesCollectionView"
+            Grid.Row="2"
             ItemSizingStrategy="MeasureFirstItem"
             SelectionChanged="OnCountrySelected"
             SelectionMode="Single"
@@ -43,7 +141,6 @@
                         RowDefinitions="Auto,Auto"
                         RowSpacing="3">
 
-                        <!--  Ligne principale  -->
                         <HorizontalStackLayout
                             Grid.Row="0"
                             Spacing="10"
@@ -73,7 +170,6 @@
 
                         </HorizontalStackLayout>
 
-                        <!--  Ligne secondaire  -->
                         <HorizontalStackLayout
                             Grid.Row="1"
                             Margin="36,0,0,0"
@@ -102,34 +198,9 @@
 
                         </HorizontalStackLayout>
                     </Grid>
-                    <!--<Grid
-                        Padding="10,4"
-                        ColumnDefinitions="40,*,Auto"
-                        HeightRequest="48">
-                        <Label
-                            Grid.Column="0"
-                            FontSize="24"
-                            Text="{Binding FlagEmoji}"
-                            VerticalOptions="Center" />
-
-                        <Label
-                            Grid.Column="1"
-                            Margin="12,0"
-                            FontSize="16"
-                            Text="{Binding Name}"
-                            VerticalOptions="Center" />
-
-                        <Label
-                            Grid.Column="2"
-                            FontSize="16"
-                            IsVisible="{Binding ShowDialCode, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
-                            Text="{Binding DialCode}"
-                            VerticalOptions="Center" />
-                    </Grid>-->
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-
-        </CollectionView>
+        </CollectionView>-->
 
     </Grid>
 </ContentView>
