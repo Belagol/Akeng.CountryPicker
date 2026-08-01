@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="AkengCountryPicker.Ressources.Themes.CountryPickerLightTheme"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Color x:Key="CountryPickerBackgroundColor">#FFFFFF</Color>
+    <Color x:Key="CountryPickerSurfaceColor">#F7F7F8</Color>
+    <Color x:Key="CountryPickerPrimaryTextColor">#1F1F1F</Color>
+    <Color x:Key="CountryPickerSecondaryTextColor">#666666</Color>
+    <Color x:Key="CountryPickerBorderColor">#DADADA</Color>
+    <Color x:Key="CountryPickerGroupHeaderColor">#EFEFF1</Color>
+    <Color x:Key="CountryPickerFavoriteColor">#D99A00</Color>
+</ResourceDictionary>

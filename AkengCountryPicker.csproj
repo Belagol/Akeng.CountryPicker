@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<!--<TargetFrameworks>net9.0</TargetFrameworks>-->
@@ -19,21 +19,22 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 
 		<PackageId>Akeng.CountryPicker</PackageId>
-		<Version>1.2.0</Version>
-		<PackageVersion>1.2.0</PackageVersion>
-		<AssemblyVersion>1.2.0</AssemblyVersion>
+		<Version>1.2.7</Version>
+		<PackageVersion>1.2.7</PackageVersion>
+		<AssemblyVersion>1.2.7</AssemblyVersion>
 		<FileVersion>1.1.2</FileVersion>
-		<Authors>Ange Gabriel Belinga</Authors>
-		<Company>Akeng</Company>
-		<Description>Package .NET MAUI fournissant la liste des pays, indicatifs téléphoniques et drapeaux.</Description>
+		<Authors>Dr. Ange Gabriel Belinga</Authors>
+		<Company>Akeng SARL AU</Company>
+		<Description>A .NET MAUI package providing a list of countries, telephone codes and flags.</Description>
 		<PackageTags>maui;countries;flags;phone;dialcode</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<RepositoryUrl>https://github.com/Belagol/Akeng.CountryPicker</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<PackageProjectUrl>https://github.com/Belagol/Akeng.CountryPicker</PackageProjectUrl>
+		<PackageProjectUrl>https://akengsarl.com/en</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>icon.png</PackageIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -42,6 +43,7 @@
 
 	<ItemGroup>
 		<None Include="README.md" Pack="true" PackagePath="\" />
+		<None Include="icon.png" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -54,6 +56,12 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Controls\CountryPickerView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Ressources\Themes\CountryPickerDarkTheme.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Ressources\Themes\CountryPickerLightTheme.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

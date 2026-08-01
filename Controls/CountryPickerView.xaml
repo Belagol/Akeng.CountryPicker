@@ -7,14 +7,320 @@
     xmlns:models="clr-namespace:AkengCountryPicker.Models"
     x:Name="root">
 
-    <Grid RowDefinitions="Auto,Auto,*" RowSpacing="8">
+    <ContentView.Resources>
+        <ResourceDictionary>
+
+            <!--  Existing theme dictionaries  -->
+
+            <!--  Default template  -->
+            <DataTemplate x:Key="DefaultCountryTemplate" x:DataType="models:CountryInfo">
+                <Grid
+                    Padding="12,6"
+                    ColumnDefinitions="40,*,Auto,Auto,44"
+                    HeightRequest="52">
+
+                    <Label
+                        FontSize="24"
+                        IsVisible="{Binding ShowEmoji, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                        Text="{Binding FlagEmoji}"
+                        VerticalOptions="Center" />
+
+                    <VerticalStackLayout
+                        Grid.Column="1"
+                        Margin="8,0"
+                        Spacing="1"
+                        VerticalOptions="Center">
+
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            LineBreakMode="TailTruncation"
+                            Text="{Binding Name}"
+                            TextColor="{DynamicResource CountryPickerPrimaryTextColor}" />
+
+                        <Label
+                            FontSize="12"
+                            IsVisible="{Binding ShowNativeName, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                            LineBreakMode="TailTruncation"
+                            Text="{Binding NativeName}"
+                            TextColor="{DynamicResource CountryPickerSecondaryTextColor}" />
+
+                    </VerticalStackLayout>
+
+                    <Label
+                        Grid.Column="2"
+                        FontSize="15"
+                        IsVisible="{Binding ShowDialCode, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                        Text="{Binding DialCode}"
+                        TextColor="{DynamicResource CountryPickerSecondaryTextColor}"
+                        VerticalOptions="Center" />
+
+                    <VerticalStackLayout
+                        Grid.Column="3"
+                        Margin="8,0"
+                        Spacing="1"
+                        VerticalOptions="Center">
+
+                        <Label
+                            FontSize="13"
+                            IsVisible="{Binding ShowIso2, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                            Text="{Binding Iso2}"
+                            TextColor="{DynamicResource CountryPickerSecondaryTextColor}" />
+
+                        <Label
+                            FontSize="13"
+                            IsVisible="{Binding ShowIso3, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                            Text="{Binding Iso3}"
+                            TextColor="{DynamicResource CountryPickerSecondaryTextColor}" />
+
+                    </VerticalStackLayout>
+
+                    <Button
+                        Grid.Column="4"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        Clicked="OnFavoriteClicked"
+                        FontSize="22"
+                        IsVisible="{Binding AllowFavoriteSelection, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                        Text="{Binding FavoriteIcon}"
+                        TextColor="{DynamicResource CountryPickerFavoriteColor}"
+                        VerticalOptions="Center" />
+
+                </Grid>
+            </DataTemplate>
+
+            <!--  Compact template  -->
+            <DataTemplate x:Key="CompactCountryTemplate" x:DataType="models:CountryInfo">
+                <Grid
+                    Padding="12,6"
+                    ColumnDefinitions="Auto,*,Auto"
+                    ColumnSpacing="10"
+                    HeightRequest="52">
+
+                    <Label
+                        FontSize="30"
+                        IsVisible="{Binding ShowEmoji, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                        Text="{Binding FlagEmoji}"
+                        VerticalOptions="Center" />
+
+
+                    <Label
+                        Grid.Column="1"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        LineBreakMode="TailTruncation"
+                        Text="{Binding Name}"
+                        TextColor="{DynamicResource CountryPickerPrimaryTextColor}"
+                        VerticalOptions="Center" />
+
+                    <Button
+                        Grid.Column="2"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        Clicked="OnFavoriteClicked"
+                        FontSize="22"
+                        IsVisible="{Binding AllowFavoriteSelection, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                        Text="{Binding FavoriteIcon}"
+                        TextColor="{DynamicResource CountryPickerFavoriteColor}"
+                        VerticalOptions="Center" />
+
+                </Grid>
+            </DataTemplate>
+
+            <!--  Phone template  -->
+            <DataTemplate x:Key="PhoneCountryTemplate" x:DataType="models:CountryInfo">
+
+                <Grid
+                    Padding="12,6"
+                    ColumnDefinitions="Auto,*,Auto"
+                    ColumnSpacing="12"
+                    HeightRequest="52"
+                    RowDefinitions="Auto,Auto">
+
+                    <Label
+                        FontSize="30"
+                        IsVisible="{Binding ShowEmoji, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                        Text="{Binding FlagEmoji}"
+                        VerticalOptions="Center" />
+
+                    <Label
+                        Grid.Column="1"
+                        FontSize="15"
+                        IsVisible="{Binding ShowDialCode, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                        Text="{Binding DialCode}"
+                        TextColor="{DynamicResource CountryPickerSecondaryTextColor}"
+                        VerticalOptions="Center" />
+
+                    <!--<Label
+                        Grid.Column="1"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        LineBreakMode="TailTruncation"
+                        Text="{Binding Name}"
+                        TextColor="{DynamicResource CountryPickerPrimaryTextColor}"
+                        VerticalOptions="Center" />-->
+
+                    <Button
+                        Grid.Column="2"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        Clicked="OnFavoriteClicked"
+                        FontSize="22"
+                        IsVisible="{Binding AllowFavoriteSelection, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                        Text="{Binding FavoriteIcon}"
+                        TextColor="{DynamicResource CountryPickerFavoriteColor}"
+                        VerticalOptions="Center" />
+
+                </Grid>
+            </DataTemplate>
+
+            <!--  ISO template  -->
+            <DataTemplate x:Key="IsoCountryTemplate" x:DataType="models:CountryInfo">
+
+                <Grid
+                    Padding="12,6"
+                    ColumnDefinitions="Auto,*,Auto"
+                    ColumnSpacing="12"
+                    HeightRequest="52"
+                    RowDefinitions="Auto,Auto">
+
+                    <Label
+                        FontSize="30"
+                        IsVisible="{Binding ShowEmoji, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                        Text="{Binding FlagEmoji}"
+                        VerticalOptions="Center" />
+
+
+                    <!--<Label
+                        Grid.Column="1"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        LineBreakMode="TailTruncation"
+                        Text="{Binding Name}"
+                        TextColor="{DynamicResource CountryPickerPrimaryTextColor}"
+                        VerticalOptions="Center" />-->
+
+                    <VerticalStackLayout
+                        Grid.Column="1"
+                        Margin="8,0"
+                        HorizontalOptions="Center"
+                        Spacing="1"
+                        VerticalOptions="Center">
+
+                        <Label
+                            FontSize="13"
+                            IsVisible="{Binding ShowIso2, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                            Text="{Binding Iso2}"
+                            TextColor="{DynamicResource CountryPickerSecondaryTextColor}" />
+
+                        <Label
+                            FontSize="13"
+                            IsVisible="{Binding ShowIso3, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                            Text="{Binding Iso3}"
+                            TextColor="{DynamicResource CountryPickerSecondaryTextColor}" />
+
+                    </VerticalStackLayout>
+
+                    <Button
+                        Grid.Column="2"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        Clicked="OnFavoriteClicked"
+                        FontSize="22"
+                        IsVisible="{Binding AllowFavoriteSelection, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                        Text="{Binding FavoriteIcon}"
+                        TextColor="{DynamicResource CountryPickerFavoriteColor}"
+                        VerticalOptions="Center" />
+
+                </Grid>
+            </DataTemplate>
+
+            <!--  Native name template  -->
+            <DataTemplate x:Key="NativeNameCountryTemplate" x:DataType="models:CountryInfo">
+
+                <Grid
+                    Padding="12,6"
+                    ColumnDefinitions="Auto,*,Auto"
+                    ColumnSpacing="12"
+                    HeightRequest="52"
+                    RowDefinitions="Auto,Auto">
+
+                    <Label
+                        Grid.RowSpan="2"
+                        FontSize="30"
+                        IsVisible="{Binding ShowEmoji, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                        Text="{Binding FlagEmoji}"
+                        VerticalOptions="Center" />
+
+                    <Label
+                        Grid.Column="1"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        IsVisible="{Binding ShowNativeName, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                        LineBreakMode="TailTruncation"
+                        Text="{Binding NativeName}"
+                        TextColor="{DynamicResource CountryPickerPrimaryTextColor}"
+                        VerticalOptions="Center" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        FontSize="12"
+                        LineBreakMode="TailTruncation"
+                        Text="{Binding Name}"
+                        TextColor="{DynamicResource CountryPickerSecondaryTextColor}"
+                        VerticalOptions="Center" />
+
+                    <Button
+                        Grid.RowSpan="2"
+                        Grid.Column="2"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        Clicked="OnFavoriteClicked"
+                        FontSize="22"
+                        IsVisible="{Binding AllowFavoriteSelection, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                        Text="{Binding FavoriteIcon}"
+                        TextColor="{DynamicResource CountryPickerFavoriteColor}"
+                        VerticalOptions="Center" />
+
+                </Grid>
+            </DataTemplate>
+
+            <!--  Flag-only template  -->
+            <DataTemplate x:Key="FlagOnlyCountryTemplate" x:DataType="models:CountryInfo">
+
+                <Grid
+                    Padding="12,6"
+                    ColumnDefinitions="*,Auto,*"
+                    HeightRequest="52">
+
+                    <Label
+                        Grid.Column="1"
+                        FontSize="30"
+                        HorizontalOptions="Center"
+                        IsVisible="{Binding ShowEmoji, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                        Text="{Binding FlagEmoji}"
+                        VerticalOptions="Center" />
+                </Grid>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <Grid
+        BackgroundColor="{DynamicResource CountryPickerBackgroundColor}"
+        RowDefinitions="Auto,Auto,*"
+        RowSpacing="8">
 
         <SearchBar
             x:Name="SearchCountryBar"
+            BackgroundColor="{DynamicResource CountryPickerSurfaceColor}"
             IsVisible="{Binding ShowSearchBar, Source={x:Reference root}}"
             Placeholder="{Binding Placeholder, Source={x:Reference root}}"
+            PlaceholderColor="{DynamicResource CountryPickerSecondaryTextColor}"
             Text="{Binding SearchText, Source={x:Reference root}, Mode=TwoWay}"
-            TextChanged="OnSearchTextChanged" />
+            TextChanged="OnSearchTextChanged"
+            TextColor="{DynamicResource CountryPickerPrimaryTextColor}" />
 
         <Label
             x:Name="EmptyMessageLabel"
@@ -27,30 +333,34 @@
         <CollectionView
             x:Name="CountriesCollectionView"
             Grid.Row="2"
+            BackgroundColor="{DynamicResource CountryPickerBackgroundColor}"
             IsGrouped="True"
             ItemSizingStrategy="MeasureFirstItem"
             SelectionChanged="OnCountrySelected"
             SelectionMode="Single">
 
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout ItemSpacing="10" Orientation="Vertical" />
+            </CollectionView.ItemsLayout>
+
             <CollectionView.GroupHeaderTemplate>
                 <DataTemplate x:DataType="models:CountryGroup">
-                    <Grid Padding="12,10,12,6">
+                    <Grid Padding="12,10,12,6" BackgroundColor="{DynamicResource CountryPickerGroupHeaderColor}">
                         <Label
                             FontAttributes="Bold"
                             FontSize="14"
                             Text="{Binding Title}"
-                            TextColor="{AppThemeBinding Light=#555555,
-                                                        Dark=#CCCCCC}" />
+                            TextColor="{DynamicResource CountryPickerPrimaryTextColor}" />
                     </Grid>
                 </DataTemplate>
             </CollectionView.GroupHeaderTemplate>
 
-            <CollectionView.ItemTemplate>
+            <!--<CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:CountryInfo">
 
                     <Grid
                         Padding="12,6"
-                        ColumnDefinitions="40,*,60,Auto,44"
+                        ColumnDefinitions="40,*,Auto,Auto,44"
                         HeightRequest="52">
 
                         <Label
@@ -66,21 +376,31 @@
                             VerticalOptions="Center">
 
                             <Label
+                                FontAttributes="Bold"
                                 FontSize="16"
                                 LineBreakMode="TailTruncation"
-                                Text="{Binding Name}" />
+                                Text="{Binding Name}"
+                                TextColor="{DynamicResource CountryPickerPrimaryTextColor}" />
 
                             <Label
                                 FontSize="12"
                                 IsVisible="{Binding ShowNativeName, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
                                 LineBreakMode="TailTruncation"
                                 Text="{Binding NativeName}"
-                                TextColor="Gray" />
+                                TextColor="{DynamicResource CountryPickerSecondaryTextColor}" />
 
                         </VerticalStackLayout>
 
-                        <VerticalStackLayout
+                        <Label
                             Grid.Column="2"
+                            FontSize="15"
+                            IsVisible="{Binding ShowDialCode, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
+                            Text="{Binding DialCode}"
+                            TextColor="{DynamicResource CountryPickerSecondaryTextColor}"
+                            VerticalOptions="Center" />
+
+                        <VerticalStackLayout
+                            Grid.Column="3"
                             Margin="8,0"
                             Spacing="1"
                             VerticalOptions="Center">
@@ -89,22 +409,15 @@
                                 FontSize="13"
                                 IsVisible="{Binding ShowIso2, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
                                 Text="{Binding Iso2}"
-                                TextColor="Gray" />
+                                TextColor="{DynamicResource CountryPickerSecondaryTextColor}" />
 
                             <Label
                                 FontSize="13"
                                 IsVisible="{Binding ShowIso3, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
                                 Text="{Binding Iso3}"
-                                TextColor="Gray" />
+                                TextColor="{DynamicResource CountryPickerSecondaryTextColor}" />
 
                         </VerticalStackLayout>
-
-                        <Label
-                            Grid.Column="3"
-                            FontSize="15"
-                            IsVisible="{Binding ShowDialCode, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
-                            Text="{Binding DialCode}"
-                            VerticalOptions="Center" />
 
                         <Button
                             Grid.Column="4"
@@ -114,93 +427,13 @@
                             FontSize="22"
                             IsVisible="{Binding AllowFavoriteSelection, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
                             Text="{Binding FavoriteIcon}"
+                            TextColor="{DynamicResource CountryPickerFavoriteColor}"
                             VerticalOptions="Center" />
 
                     </Grid>
 
                 </DataTemplate>
-            </CollectionView.ItemTemplate>
+            </CollectionView.ItemTemplate>-->
         </CollectionView>
-
-        <!--<CollectionView
-            x:Name="CountriesCollectionView"
-            Grid.Row="2"
-            ItemSizingStrategy="MeasureFirstItem"
-            SelectionChanged="OnCountrySelected"
-            SelectionMode="Single"
-            VerticalOptions="Fill">
-
-            <CollectionView.ItemsLayout>
-                <LinearItemsLayout ItemSpacing="0" Orientation="Vertical" />
-            </CollectionView.ItemsLayout>
-
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="models:CountryInfo">
-                    <Grid
-                        Padding="12,8"
-                        RowDefinitions="Auto,Auto"
-                        RowSpacing="3">
-
-                        <HorizontalStackLayout
-                            Grid.Row="0"
-                            Spacing="10"
-                            VerticalOptions="Center">
-
-                            <Label
-                                FontSize="26"
-                                IsVisible="{Binding ShowEmoji, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
-                                Text="{Binding FlagEmoji}"
-                                VerticalOptions="Center" />
-
-                            <Label
-                                FontAttributes="Bold"
-                                FontSize="16"
-                                LineBreakMode="TailTruncation"
-                                Text="{Binding Name}"
-                                VerticalOptions="Center" />
-
-                            <Label
-                                FontSize="15"
-                                HorizontalOptions="End"
-                                IsVisible="{Binding ShowDialCode, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
-                                Text="{Binding DialCode}"
-                                TextColor="{AppThemeBinding Light=#666666,
-                                                            Dark=#BDBDBD}"
-                                VerticalOptions="Center" />
-
-                        </HorizontalStackLayout>
-
-                        <HorizontalStackLayout
-                            Grid.Row="1"
-                            Margin="36,0,0,0"
-                            Spacing="8">
-
-                            <Label
-                                FontSize="13"
-                                IsVisible="{Binding ShowNativeName, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
-                                Text="{Binding NativeName}"
-                                TextColor="{AppThemeBinding Light=#777777,
-                                                            Dark=#B0B0B0}" />
-
-                            <Label
-                                FontSize="13"
-                                IsVisible="{Binding ShowIso2, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
-                                Text="{Binding Iso2, StringFormat='ISO2: {0}'}"
-                                TextColor="{AppThemeBinding Light=#777777,
-                                                            Dark=#B0B0B0}" />
-
-                            <Label
-                                FontSize="13"
-                                IsVisible="{Binding ShowIso3, Source={RelativeSource AncestorType={x:Type controls:CountryPickerView}}}"
-                                Text="{Binding Iso3, StringFormat='ISO3: {0}'}"
-                                TextColor="{AppThemeBinding Light=#777777,
-                                                            Dark=#B0B0B0}" />
-
-                        </HorizontalStackLayout>
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>-->
-
     </Grid>
 </ContentView>

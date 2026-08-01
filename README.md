@@ -99,10 +99,7 @@ XAML
 
 ```xml
 <countryPicker:CountryPickerView
-    SelectedCountry="{Binding SelectedCountry}"
-    ShowFlags="True"
-    ShowDialCode="True"
-    ShowSearchBar="True"/>
+    SelectedCountry="{Binding SelectedCountry}"/>
 ```
 
 ViewModel
@@ -134,6 +131,7 @@ public CountryInfo? SelectedCountry
 | ShowRecentCountries    | True                | Show recent selected countries  |
 | AllowFavoriteSelection | True                | Allow favorites selection       |
 | MaxRecentCountries     | 5                   | Set maximum recent countries    |
+| Theme                  | System              |  Control current theme          |
 
 ---
 
@@ -192,6 +190,64 @@ private void OnCountrySelected(object sender, CountryInfo country)
 }
 ```
 
+
+## 🎨 Themes
+
+`Akeng.CountryPicker` supports three theme modes:
+
+- **System** *(default)* – Automatically follows the application's current Light/Dark theme.
+- **Light** – Always uses the light theme.
+- **Dark** – Always uses the dark theme.
+
+Unlike changing `Application.Current.UserAppTheme`, the `Theme` property only affects the `CountryPickerView` instance, leaving the rest of your application unchanged.
+
+### Change the Theme at Runtime
+
+```csharp
+countryPicker.Theme = CountryPickerTheme.Dark;
+
+countryPicker.Theme = CountryPickerTheme.Light;
+
+countryPicker.Theme = CountryPickerTheme.System;
+```
+
+> **Note**
+> The `Theme` property applies **only** to `CountryPickerView`. This allows you to display a dark picker inside a light application (or vice versa) without changing the application's global theme.
+
+---
+
+## 🧩 Built-in Country Item Templates
+
+`Akeng.CountryPicker` includes several built-in item layouts that can be selected through the `TemplateMode` property.
+
+This allows developers to change how countries are displayed without creating a custom `DataTemplate`.
+
+### Available Templates
+
+| Template | Description |
+|---|---|
+| `Default` | Displays the flag, country name, native name, dial code, ISO codes, and favorite action depending on the enabled display options. |
+| `Compact` | Displays a compact row with the flag, country name, and favorite action. |
+| `Phone` | Highlights the international dial code and displays the country name below it. |
+| `Iso` | Displays the country name with its ISO2 and ISO3 codes. |
+| `NativeName` | Highlights the country's native name and displays the standard name below it. |
+| `FlagOnly` | Displays only the country flag. |
+
+### Change the Template at Runtime
+
+```csharp
+countryPicker.TemplateMode = CountryItemTemplateMode.Compact;
+
+countryPicker.TemplateMode = CountryItemTemplateMode.Phone;
+
+countryPicker.TemplateMode = CountryItemTemplateMode.Default;
+```
+
+Changing the template does not reload the country data. The picker keeps its current countries, favorites, recent countries, search state, and selection.
+
+> **Note**
+> Built-in templates can be combined with properties such as `ShowEmoji`, `ShowNativeName`, `ShowDialCode`, `ShowIso2`, `ShowIso3`, and `AllowFavoriteSelection`. Some properties may not apply to templates that intentionally display a limited set of information, such as `FlagOnly`.
+
 ---
 
 # Country Model
@@ -233,12 +289,12 @@ Coming soon.
 - [x] Dialing codes
 - [x] ISO2 / ISO3
 - [ ] SVG flags
-- [ ] Dark theme
+- [x] Dark theme
 - [x] Localization
 - [x] Geolocation
 - [x] Favorite countries
 - [x] Recent countries
-- [ ] Country templates
+- [x] Country templates
 - [ ] PhoneEntry control
 
 ---
