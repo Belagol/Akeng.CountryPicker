@@ -2,12 +2,16 @@
 
 	<PropertyGroup>
 		<!--<TargetFrameworks>net9.0</TargetFrameworks>-->
-		<TargetFrameworks>net9.0-android;net9.0-ios;net9.0-maccatalyst</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net9.0-windows10.0.19041.0</TargetFrameworks>
+		<TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+		<!--<TargetFrameworks>net8.0-android;net8.0-ios;net8.0-maccatalyst;net9.0-android;net9.0-ios;net9.0-maccatalyst</TargetFrameworks>-->
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0;net9.0-windows10.0.19041.0</TargetFrameworks>
 		 <!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET  -->
 		 <!-- <TargetFrameworks>$(TargetFrameworks);net9.0-tizen</TargetFrameworks>  -->
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
+
+		<CheckEolWorkloads>false</CheckEolWorkloads>
+
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 
@@ -19,9 +23,9 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 
 		<PackageId>Akeng.CountryPicker</PackageId>
-		<Version>1.2.7</Version>
-		<PackageVersion>1.2.7</PackageVersion>
-		<AssemblyVersion>1.2.7</AssemblyVersion>
+		<Version>1.2.8</Version>
+		<PackageVersion>1.2.8</PackageVersion>
+		<AssemblyVersion>1.2.8</AssemblyVersion>
 		<FileVersion>1.1.2</FileVersion>
 		<Authors>Dr. Ange Gabriel Belinga</Authors>
 		<Company>Akeng SARL AU</Company>

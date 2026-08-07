@@ -1,7 +1,9 @@
+using AkengCountryPicker.Events;
 using AkengCountryPicker.Models;
 using AkengCountryPicker.Ressources.Themes;
 using AkengCountryPicker.Services;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace AkengCountryPicker.Controls;
 
@@ -21,6 +23,7 @@ public partial class CountryPickerView : ContentView
     private bool _isHandlingSelection;
 
     public event EventHandler<CountryInfo>? CountrySelected;
+    public event EventHandler<FavoriteChangedEventArgs>? FavoriteChanged;
 
     private readonly ObservableCollection<CountryGroup> _countryGroups = [];
 
@@ -256,12 +259,45 @@ public partial class CountryPickerView : ContentView
         set => SetValue(TemplateModeProperty, value);
     }
 
-    
+
+    public static readonly BindableProperty CountryTemplateProperty =
+        BindableProperty.Create(
+            nameof(CountryTemplate),
+            typeof(DataTemplate),
+            typeof(CountryPickerView),
+            default(DataTemplate),
+            propertyChanged: OnCountryTemplateChanged);
+
+    public DataTemplate? CountryTemplate
+    {
+        get => (DataTemplate?)GetValue(CountryTemplateProperty);
+        set => SetValue(CountryTemplateProperty, value);
+    }
+
+
+    #endregion
+
+    #region Commands
+    public ICommand ToggleFavoriteCommand { get; }
+
+    public static readonly BindableProperty CountrySelectedCommandProperty =
+        BindableProperty.Create(
+            nameof(CountrySelectedCommand),
+            typeof(ICommand),
+            typeof(CountryPickerView));
+
+    public ICommand? CountrySelectedCommand
+    {
+        get => (ICommand?)GetValue(CountrySelectedCommandProperty);
+        set => SetValue(CountrySelectedCommandProperty, value);
+    }
     #endregion
 
     public CountryPickerView()
 	{
 		InitializeComponent();
+
+        ToggleFavoriteCommand = new Command<CountryInfo>(ToggleFavorite);
 
         _countryService = new CountryService();
         _countryDetectionService = new CountryDetectionService();
@@ -277,6 +313,14 @@ public partial class CountryPickerView : ContentView
     }
 
     #region Methods
+    private static void OnCountryTemplateChanged(BindableObject bindable, object oldValue, object newValue)
+    {
+        if (bindable is CountryPickerView picker)
+        {
+            picker.ApplyCountryTemplate();
+        }
+    }
+
     private static void OnTemplateModeChanged(BindableObject bindable, object oldValue,  object newValue)
     {
         if (bindable is CountryPickerView picker)
@@ -289,6 +333,12 @@ public partial class CountryPickerView : ContentView
     {
         if (CountriesCollectionView is null)
             return;
+
+        if(CountryTemplate is not null)
+        {
+            CountriesCollectionView.ItemTemplate = CountryTemplate;
+            return;
+        }
 
         var resourceKey = TemplateMode switch
         {
@@ -605,6 +655,11 @@ public partial class CountryPickerView : ContentView
             AddToRecentCountries(country);
 
             CountrySelected?.Invoke(this, country);
+
+            if (CountrySelectedCommand?.CanExecute(country) == true)
+            {
+                CountrySelectedCommand.Execute(country);
+            }
         }
         finally
         {
@@ -722,6 +777,41 @@ public partial class CountryPickerView : ContentView
             return;
         }
 
+        ToggleFavorite(country);
+
+        //try
+        //{
+        //    _isUpdatingFavorite = true;
+
+        //    country.IsFavorite = !country.IsFavorite;
+
+        //    UpdateFavoriteStorage(country);
+        //    RefreshFavoriteGroups(country);
+        //}
+        //finally
+        //{
+        //    _isUpdatingFavorite = false;
+        //}
+
+        ////if (sender is not Button { BindingContext: CountryInfo country })
+        ////    return;
+
+        ////country.IsFavorite = !country.IsFavorite;
+
+        ////_favoriteIso2Codes.RemoveAll(iso2 => string.Equals(iso2, country.Iso2, StringComparison.OrdinalIgnoreCase));
+
+        ////if (country.IsFavorite)
+        ////{
+        ////    _favoriteIso2Codes.Insert(0, country.Iso2.ToUpperInvariant());
+        ////}
+
+        ////_countryHistoryService.SetFavoriteIso2Codes(_favoriteIso2Codes);
+    }
+    private void ToggleFavorite(CountryInfo? country)
+    {
+        if (country is null)
+            return;
+
         try
         {
             _isUpdatingFavorite = true;
@@ -736,19 +826,25 @@ public partial class CountryPickerView : ContentView
             _isUpdatingFavorite = false;
         }
 
-        //if (sender is not Button { BindingContext: CountryInfo country })
-        //    return;
-
         //country.IsFavorite = !country.IsFavorite;
 
-        //_favoriteIso2Codes.RemoveAll(iso2 => string.Equals(iso2, country.Iso2, StringComparison.OrdinalIgnoreCase));
+        //_favoriteIso2Codes.RemoveAll(iso2 =>
+        //    string.Equals(
+        //        iso2,
+        //        country.Iso2,
+        //        StringComparison.OrdinalIgnoreCase));
 
         //if (country.IsFavorite)
         //{
-        //    _favoriteIso2Codes.Insert(0, country.Iso2.ToUpperInvariant());
+        //    _favoriteIso2Codes.Insert(
+        //        0,
+        //        country.Iso2.ToUpperInvariant());
         //}
 
-        //_countryHistoryService.SetFavoriteIso2Codes(_favoriteIso2Codes);
+        //_countryHistoryService.SetFavoriteIso2Codes(
+        //    _favoriteIso2Codes);
+
+        //RefreshFavoriteGroups(country);
     }
     private void UpdateFavoriteStorage(
     CountryInfo country)

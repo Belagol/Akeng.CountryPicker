@@ -1,48 +1,34 @@
 ﻿# Akeng.CountryPicker
 
-A lightweight and customizable **.NET MAUI Country Picker** with support for:
+A lightweight and customizable **.NET MAUI Country Picker** for Android, iOS, Windows and MacCatalyst.
+
+## ✨ Features
 
 - 🌍 240+ countries
 - 📞 International dialing codes
-- 🏳️ Country emojis
-- 🏳️ Country flags
-- 🔍 Built-in search
-- 🎯 Ready-to-use MAUI picker
-- 🧩 Country service for custom UI
+- 🏳️ Country emoji / flag support
+- 🔍 Fast built-in search
+- ⭐ Favorite countries
+- 🕘 Recent countries
+- 🌐 Device region detection
+- 📍 Optional geolocation-based country detection
+- 🎨 Light, Dark and System themes
+- 🧩 Built-in item templates
+- 🎛️ Fully custom `DataTemplate`
+- 🔄 Two-way selected country binding
+- ⚡ MVVM command support
+- 🧩 `ICountryService` for fully custom UIs
 - 📱 Android, iOS, Windows and MacCatalyst
-
----
-
-## Features
-
-- ✅ 240+ countries
-- ✅ ISO 3166-1 Alpha-2 & Alpha-3 codes
-- ✅ International dialing codes
-- ✅ Built-in searchable picker
-- ✅ Customizable UI
-- ✅ Dependency Injection support
-- ✅ Works on all .NET MAUI platforms
-- 🌍 Automatic country detection using the device's location (optional)
-- 🌐 Automatic country detection using the device's region settings
-- 🔒 No location permission required unless Geolocation mode is enabled
 
 ---
 
 # Installation
 
-Install from NuGet
-
 ```bash
 dotnet add package Akeng.CountryPicker
 ```
 
-or using the NuGet Package Manager.
-
----
-
-# Register the service
-
-In `MauiProgram.cs`
+Register the package in `MauiProgram.cs`:
 
 ```csharp
 using Akeng.CountryPicker.Extensions;
@@ -54,9 +40,9 @@ builder
 
 ---
 
-# Option 1 - Use the Country Service
+# Usage
 
-Inject the service:
+## Option 1 — Use `ICountryService`
 
 ```csharp
 public class HomeViewModel
@@ -75,34 +61,29 @@ public class HomeViewModel
 }
 ```
 
-Available methods
+Available methods:
 
 ```csharp
 Task<List<CountryInfo>> GetCountriesAsync();
-
 Task<List<CountryInfo>> SearchAsync(string text);
-
 Task<CountryInfo?> GetByIso2Async(string iso2);
-
 Task<CountryInfo?> GetByIso3Async(string iso3);
-
 Task<CountryInfo?> GetByDialCodeAsync(string dialCode);
-
 Task<CountryInfo?> GetCurrentCountryAsync();
 ```
 
 ---
 
-# Option 2 - Use the built-in Country Picker
-
-XAML
+## Option 2 — Use `CountryPickerView`
 
 ```xml
+xmlns:countryPicker="clr-namespace:AkengCountryPicker.Controls;assembly=AkengCountryPicker"
+
 <countryPicker:CountryPickerView
-    SelectedCountry="{Binding SelectedCountry}"/>
+    SelectedCountry="{Binding SelectedCountry}" />
 ```
 
-ViewModel
+ViewModel:
 
 ```csharp
 public CountryInfo? SelectedCountry
@@ -116,71 +97,33 @@ public CountryInfo? SelectedCountry
 
 # Customization
 
-| Property               | Default             | Description                     |
-|------------------------|---------------------|---------------------------------|
-| ShowEmoji              | True                | Display country flags emoji     |
-| ShowDialCode           | True                | Display dialing codes           |
-| ShowSearchBar          | True                | Display search bar              |
-| Placeholder            | Search country...   | Search placeholder              |
-| EmptyMessage           | No country found    | Message when no country matches |
-| ShowNativeName         | True                | Display native country name     |
-| ShowIso2               | False               | Display country iso2 code       |
-| ShowIso3               | False               | Display country iso3 code       |
-| DetectionMode          | None                | Country mode dectection         |
-| ShowFavorites          | True                | Show favorites countries        |
-| ShowRecentCountries    | True                | Show recent selected countries  |
-| AllowFavoriteSelection | True                | Allow favorites selection       |
-| MaxRecentCountries     | 5                   | Set maximum recent countries    |
-| Theme                  | System              |  Control current theme          |
+| Property | Default | Description |
+|---|---:|---|
+| `ShowEmoji` | `True` | Show country emoji |
+| `ShowDialCode` | `True` | Show dialing code |
+| `ShowSearchBar` | `True` | Show search bar |
+| `ShowNativeName` | `True` | Show native country name |
+| `ShowIso2` | `False` | Show ISO2 |
+| `ShowIso3` | `False` | Show ISO3 |
+| `ShowFavorites` | `True` | Show favorites group |
+| `ShowRecentCountries` | `True` | Show recent countries |
+| `AllowFavoriteSelection` | `True` | Allow favorite toggle |
+| `MaxRecentCountries` | `5` | Maximum recent countries |
+| `DetectionMode` | `None` | Country detection mode |
+| `Theme` | `System` | Picker theme |
+| `TemplateMode` | `Default` | Built-in item layout |
+| `Placeholder` | `Search country...` | Search placeholder |
+| `EmptyMessage` | `No country found` | Empty result message |
 
 ---
 
-## 🌍 Automatic Country Detection (Geolocation)
+# Country Selection
 
-`CountryPickerView` can automatically select the user's current country based on the device's geographic location.
-
-```xml
-<countryPicker:CountryPickerView
-    DetectionMode="Geolocation" />
-```
-
-### Platform Permissions
-
-When using `DetectionMode="Geolocation"`, your application **must** request location permissions.
-
-### Android
-
-Add the following permissions to your **Platforms/Android/AndroidManifest.xml**:
-
-```xml
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-```
-
-### iOS / Mac Catalyst
-
-Add the following key to your **Platforms/iOS/Info.plist** (and **Platforms/MacCatalyst/Info.plist** if applicable):
-
-```xml
-<key>NSLocationWhenInUseUsageDescription</key>
-<string>This application uses your location to automatically select your current country.</string>
-```
-
-### Requesting Permission
-
-The Country Picker requests location permission only when `DetectionMode` is set to `Geolocation`.
-
-If the user denies the permission or the location cannot be determined, the picker simply loads the country list without selecting a default country.
-
-> **Note**
-> The package does **not** force location access. Applications that do not use `DetectionMode="Geolocation"` do not need to declare any location permissions.
-
-
-# Country Selected Event
+Event-based:
 
 ```xml
 <countryPicker:CountryPickerView
-    CountrySelected="OnCountrySelected"/>
+    CountrySelected="OnCountrySelected" />
 ```
 
 ```csharp
@@ -190,63 +133,165 @@ private void OnCountrySelected(object sender, CountryInfo country)
 }
 ```
 
+MVVM command:
 
-## 🎨 Themes
-
-`Akeng.CountryPicker` supports three theme modes:
-
-- **System** *(default)* – Automatically follows the application's current Light/Dark theme.
-- **Light** – Always uses the light theme.
-- **Dark** – Always uses the dark theme.
-
-Unlike changing `Application.Current.UserAppTheme`, the `Theme` property only affects the `CountryPickerView` instance, leaving the rest of your application unchanged.
-
-### Change the Theme at Runtime
-
-```csharp
-countryPicker.Theme = CountryPickerTheme.Dark;
-
-countryPicker.Theme = CountryPickerTheme.Light;
-
-countryPicker.Theme = CountryPickerTheme.System;
+```xml
+<countryPicker:CountryPickerView
+    SelectedCountry="{Binding SelectedCountry}"
+    CountrySelectedCommand="{Binding CountrySelectedCommand}" />
 ```
-
-> **Note**
-> The `Theme` property applies **only** to `CountryPickerView`. This allows you to display a dark picker inside a light application (or vice versa) without changing the application's global theme.
 
 ---
 
-## 🧩 Built-in Country Item Templates
+# 🌍 Automatic Country Detection
 
-`Akeng.CountryPicker` includes several built-in item layouts that can be selected through the `TemplateMode` property.
+```xml
+<countryPicker:CountryPickerView
+    DetectionMode="Geolocation" />
+```
 
-This allows developers to change how countries are displayed without creating a custom `DataTemplate`.
+Available modes:
 
-### Available Templates
+```csharp
+None
+DeviceRegion
+Geolocation
+```
 
-| Template | Description |
-|---|---|
-| `Default` | Displays the flag, country name, native name, dial code, ISO codes, and favorite action depending on the enabled display options. |
-| `Compact` | Displays a compact row with the flag, country name, and favorite action. |
-| `Phone` | Highlights the international dial code and displays the country name below it. |
-| `Iso` | Displays the country name with its ISO2 and ISO3 codes. |
-| `NativeName` | Highlights the country's native name and displays the standard name below it. |
-| `FlagOnly` | Displays only the country flag. |
+## Android permissions
 
-### Change the Template at Runtime
+Add to `Platforms/Android/AndroidManifest.xml`:
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+```
+
+## iOS / MacCatalyst
+
+Add to `Info.plist`:
+
+```xml
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>This application uses your location to automatically select your current country.</string>
+```
+
+> Geolocation is optional. No location permission is required unless `DetectionMode="Geolocation"` is used.
+
+---
+
+# 🎨 Themes
+
+Available themes:
+
+```csharp
+System
+Light
+Dark
+```
+
+```xml
+<countryPicker:CountryPickerView
+    Theme="Dark" />
+```
+
+Change at runtime:
+
+```csharp
+countryPicker.Theme = CountryPickerTheme.Dark;
+countryPicker.Theme = CountryPickerTheme.Light;
+countryPicker.Theme = CountryPickerTheme.System;
+```
+
+The picker theme only affects `CountryPickerView`, not the entire application.
+
+---
+
+# 🧩 Built-in Templates
+
+Available template modes:
+
+- `Default`
+- `Compact`
+- `Phone`
+- `Iso`
+- `NativeName`
+- `FlagOnly`
+
+```xml
+<countryPicker:CountryPickerView
+    TemplateMode="Phone" />
+```
+
+Change at runtime:
 
 ```csharp
 countryPicker.TemplateMode = CountryItemTemplateMode.Compact;
-
-countryPicker.TemplateMode = CountryItemTemplateMode.Phone;
-
-countryPicker.TemplateMode = CountryItemTemplateMode.Default;
 ```
 
-Changing the template does not reload the country data. The picker keeps its current countries, favorites, recent countries, search state, and selection.
+---
 
-> **Note**
-> Built-in templates can be combined with properties such as `ShowEmoji`, `ShowNativeName`, `ShowDialCode`, `ShowIso2`, `ShowIso3`, and `AllowFavoriteSelection`. Some properties may not apply to templates that intentionally display a limited set of information, such as `FlagOnly`.
+# 🎛️ Custom Country Template
+
+You can completely replace the built-in item layout.
+
+```xml
+xmlns:countryModels="clr-namespace:AkengCountryPicker.Models;assembly=AkengCountryPicker"
+
+<countryPicker:CountryPickerView>
+
+    <countryPicker:CountryPickerView.CountryTemplate>
+
+        <DataTemplate x:DataType="countryModels:CountryInfo">
+
+            <Grid
+                Padding="12"
+                ColumnDefinitions="Auto,*,Auto">
+
+                <Label
+                    FontSize="26"
+                    Text="{Binding FlagEmoji}" />
+
+                <VerticalStackLayout
+                    Grid.Column="1"
+                    Margin="12,0">
+
+                    <Label
+                        FontAttributes="Bold"
+                        Text="{Binding Name}" />
+
+                    <Label
+                        FontSize="12"
+                        Text="{Binding DialCode}" />
+
+                </VerticalStackLayout>
+
+            </Grid>
+
+        </DataTemplate>
+
+    </countryPicker:CountryPickerView.CountryTemplate>
+
+</countryPicker:CountryPickerView>
+```
+
+A custom `CountryTemplate` takes priority over `TemplateMode`.
+
+The picker still keeps its built-in search, selection, recent countries and favorites logic.
+
+---
+
+# ⭐ Favorites & Recent Countries
+
+The picker automatically:
+
+- persists favorite countries
+- remembers recently selected countries
+- avoids duplicates
+- limits recent countries with `MaxRecentCountries`
+- updates the groups in real time
+
+Favorites and recent countries are stored locally using country ISO2 codes.
 
 ---
 
@@ -255,29 +300,19 @@ Changing the template does not reload the country data. The picker keeps its cur
 ```csharp
 public class CountryInfo
 {
-    public string Name { get; set; }
+    public string Name { get; set; } = string.Empty;
+    public string NativeName { get; set; } = string.Empty;
+    public string Iso2 { get; set; } = string.Empty;
+    public string Iso3 { get; set; } = string.Empty;
+    public string DialCode { get; set; } = string.Empty;
+    public string FlagEmoji { get; set; } = string.Empty;
 
-    public string NativeName { get; set; }
+    public bool IsFavorite { get; set; }
 
-    public string Iso2 { get; set; }
-
-    public string Iso3 { get; set; }
-
-    public string DialCode { get; set; }
-
-    public string FlagEmoji { get; set; }
-
-    public string FlagImage { get; set; }
-     
-    public string DisplayName => $"{FlagEmoji} {Name} ({DialCode})";
+    public string FavoriteIcon =>
+        IsFavorite ? "★" : "☆";
 }
 ```
-
----
-
-# Screenshots
-
-Coming soon.
 
 ---
 
@@ -286,35 +321,39 @@ Coming soon.
 - [x] Country service
 - [x] Country picker
 - [x] Search
-- [x] Dialing codes
+- [x] Dial codes
 - [x] ISO2 / ISO3
-- [ ] SVG flags
-- [x] Dark theme
-- [x] Localization
-- [x] Geolocation
-- [x] Favorite countries
+- [x] Favorites
 - [x] Recent countries
-- [x] Country templates
+- [x] Geolocation
+- [x] Device region detection
+- [x] Light / Dark / System themes
+- [x] Built-in templates
+- [x] Custom `CountryTemplate`
+- [x] MVVM command support
+- [ ] Image/SVG flag mode
+- [ ] Advanced localization
 - [ ] PhoneEntry control
 
 ---
 
-## 🤝 Contributing
+## Supported Frameworks
 
-Contributions are welcome!
+| Framework | Status |
+|---|---|
+| .NET 10 MAUI | ✅ Supported |
+| .NET 9 MAUI | ✅ Supported |
+| .NET 8 MAUI | ⚠️ Legacy / no longer actively supported |
 
-You can contribute by:
+---
 
-- Reporting bugs
-- Suggesting new features
-- Improving documentation
-- Submitting pull requests
+# 🤝 Contributing
 
-Repository: https://github.com/Belagol/Akeng.CountryPicker
+Contributions are welcome.
 
-Issues: https://github.com/Belagol/Akeng.CountryPicker/issues
-
-Pull Requests: https://github.com/Belagol/Akeng.CountryPicker/pulls
+- Repository: https://github.com/Belagol/Akeng.CountryPicker
+- Issues: https://github.com/Belagol/Akeng.CountryPicker/issues
+- Pull Requests: https://github.com/Belagol/Akeng.CountryPicker/pulls
 
 ---
 
